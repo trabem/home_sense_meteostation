@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TP5000-QFN16
+D (2A switching 4.2V lithium battery / 3.6V lithium iron Battery charger)
+K
+F https://voron.ua/files/pdf/Microshema/TP5000_auto_translated_.pdf
+$ENDCMP
+#
+#End Doc Library

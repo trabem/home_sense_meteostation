@@ -1,0 +1,10 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "esp32c3_super_mini") (type "KiCad") (uri "${KIPRJMOD}/symbols/esp32c3_super_mini") (options "") (descr ""))
+	(lib (name "CJMCU-3935_KiCad") (type "KiCad") (uri "${KIPRJMOD}/symbols/CJMCU-3935_KiCad") (options "") (descr ""))
+	(lib (name "TPS631000DRLR") (type "KiCad") (uri "${KIPRJMOD}/symbols/ul_TPS631000DRLR/footprints.pretty") (options "") (descr ""))
+	(lib (name "MCP6542T-I-MS") (type "KiCad") (uri "${KIPRJMOD}/symbols/ul_MCP6542T-I-MS/footprints.pretty") (options "") (descr ""))
+	(lib (name "IHLP1212BZER1R0M11") (type "KiCad") (uri "${KIPRJMOD}/symbols/IHLP1212BZER1R0M11") (options "") (descr ""))
+	(lib (name "TP5000-QFN16") (type "KiCad") (uri "${KIPRJMOD}/symbols/TP5000-QFN16") (options "") (descr ""))
+	(lib (name "ul_E22-900MM22S") (type "KiCad") (uri "${KIPRJMOD}/symbols/ul_E22-900MM22S/footprints.pretty") (options "") (descr ""))
+)

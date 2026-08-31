@@ -1,0 +1,40 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model TP5000-QFN16
+#/2387156/2145375/2.50/17/3/Integrated Circuit
+DEF TP5000-QFN16 IC 0 30 Y Y 1 F N
+F0 "IC" 1250 700 50 H V L CNN
+F1 "TP5000-QFN16" 1250 600 50 H V L CNN
+F2 "QFN65P400X400X90-17N-D" 1250 500 50 H I L CNN
+F3 "https://voron.ua/files/pdf/Microshema/TP5000_auto_translated_.pdf" 1250 400 50 H I L CNN
+F4 "(2A switching 4.2V lithium battery / 3.6V lithium iron Battery charger)" 1250 300 50 H I L CNN "Description"
+F5 "0.9" 1250 200 50 H I L CNN "Height"
+F6 "Nanjing Extension Microelectronics" 1250 100 50 H I L CNN "Manufacturer_Name"
+F7 "TP5000-QFN16" 1250 0 50 H I L CNN "Manufacturer_Part_Number"
+F8 "" 1250 -100 50 H I L CNN "Mouser Part Number"
+F9 "" 1250 -200 50 H I L CNN "Mouser Price/Stock"
+F10 "" 1250 -300 50 H I L CNN "Arrow Part Number"
+F11 "" 1250 -400 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X VIN_1 1 0 0 200 R 50 50 0 0 P
+X VIN_2 2 0 -100 200 R 50 50 0 0 P
+X LX_1 3 0 -200 200 R 50 50 0 0 P
+X LX_2 4 0 -300 200 R 50 50 0 0 P
+X LX_3 5 500 -1000 200 U 50 50 0 0 P
+X GND_1 6 600 -1000 200 U 50 50 0 0 P
+X GND_2 7 700 -1000 200 U 50 50 0 0 P
+X VS 8 800 -1000 200 U 50 50 0 0 P
+X RTRICK 12 1400 0 200 L 50 50 0 0 P
+X TS 11 1400 -100 200 L 50 50 0 0 P
+X VREG 10 1400 -200 200 L 50 50 0 0 P
+X BAT 9 1400 -300 200 L 50 50 0 0 P
+X EP 17 500 700 200 D 50 50 0 0 P
+X VIN_3 16 600 700 200 D 50 50 0 0 P
+X ~CHRG 15 700 700 200 D 50 50 0 0 P
+X ~STDBY 14 800 700 200 D 50 50 0 0 P
+X CS 13 900 700 200 D 50 50 0 0 P
+P 5 0 1 6 200 500 1200 500 1200 -800 200 -800 200 500 N
+ENDDRAW
+ENDDEF
+#
+#End Library
