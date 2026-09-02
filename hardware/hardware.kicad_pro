@@ -659,15 +659,24 @@
         "filename": "hardware.kicad_sch",
         "name": "Root",
         "uuid": "c188e145-349d-484e-a5ed-94efd42d01f5"
+      },
+      {
+        "filename": "untitled.kicad_sch",
+        "name": "Power",
+        "uuid": "85046142-a8d8-4f38-9e10-1de8a043d2fb"
       }
     ],
-    "used_designators": "BAT1,U1-9,L1-2,BT1,#PWR1-16,TH1,J1-8,C1-4,R1-2,IC1,ANT1",
+    "used_designators": "U1-9,BAT1,#PWR1-61,BT1-2,L1-4,TH1,J1-8,C1-16,R1-25,#FLG1-10,IC1-4,ANT1,Q1-5,F1-2,D1-6",
     "variants": []
   },
   "sheets": [
     [
       "c188e145-349d-484e-a5ed-94efd42d01f5",
       "Root"
+    ],
+    [
+      "85046142-a8d8-4f38-9e10-1de8a043d2fb",
+      "Power"
     ]
   ],
   "text_variables": {},

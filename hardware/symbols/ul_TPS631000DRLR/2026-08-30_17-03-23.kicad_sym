@@ -147,7 +147,7 @@
 					(type none)
 				)
 			)
-			(pin power_in line
+			(pin power_out line
 				(at 0 0 0)
 				(length 7.62)
 				(name "VOUT"
@@ -165,7 +165,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin passive line
 				(at 0 -2.54 0)
 				(length 7.62)
 				(name "LX2"
@@ -183,7 +183,7 @@
 					)
 				)
 			)
-			(pin power_in line
+			(pin passive line
 				(at 0 -5.08 0)
 				(length 7.62)
 				(name "LX1"
