@@ -7,4 +7,7 @@
 	(lib (name "IHLP1212BZER1R0M11") (type "KiCad") (uri "${KIPRJMOD}/symbols/IHLP1212BZER1R0M11") (options "") (descr ""))
 	(lib (name "TP5000-QFN16") (type "KiCad") (uri "${KIPRJMOD}/symbols/TP5000-QFN16") (options "") (descr ""))
 	(lib (name "ul_E22-900MM22S") (type "KiCad") (uri "${KIPRJMOD}/symbols/ul_E22-900MM22S/footprints.pretty") (options "") (descr ""))
+	(lib (name "TPS2121RUXT") (type "KiCad") (uri "${KIPRJMOD}/symbols/TPS2121RUXT") (options "") (descr ""))
+	(lib (name "USB4105-GF-A-060") (type "KiCad") (uri "${KIPRJMOD}/symbols/USB4105-GF-A-060") (options "") (descr ""))
+	(lib (name "footprints") (type "KiCad") (uri "${KIPRJMOD}/symbols/ul_IHLP2525CZER4R7M01/footprints.pretty") (options "") (descr ""))
 )

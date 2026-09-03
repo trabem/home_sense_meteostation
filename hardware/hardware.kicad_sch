@@ -1954,6 +1954,147 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:R_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.254)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.016 1.016)
+					)
+				)
+			)
+			(property "Value" "R_Small"
+				(at 1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor, small symbol"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_Small_0_1"
+				(rectangle
+					(start -0.762 1.778)
+					(end 0.762 -1.778)
+					(stroke
+						(width 0.2032)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_Small_1_1"
+				(pin passive line
+					(at 0 2.54 270)
+					(length 0.762)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -2.54 90)
+					(length 0.762)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "ESP32-C3_SUPERMINI:ESP32-C3_SUPERMINI"
 			(pin_names
 				(offset 1.016)
@@ -4211,9 +4352,65 @@
 		)
 		(uuid "bd03baa4-b3ca-4ce6-bf3f-65bac6b5aab2")
 	)
+	(junction
+		(at 107.95 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3f9487e2-b362-45de-b7c1-39456263df93")
+	)
 	(no_connect
 		(at 180.34 105.41)
 		(uuid "0d7245f4-14d6-4827-8d06-6dac718be561")
+	)
+	(wire
+		(pts
+			(xy 107.95 95.25) (xy 116.84 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "460c96d3-5f12-41ec-9328-5648a1356760")
+	)
+	(wire
+		(pts
+			(xy 107.95 91.44) (xy 107.95 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "667d8a2b-2b8c-4e76-85f9-3faaf7f5b252")
+	)
+	(wire
+		(pts
+			(xy 107.95 95.25) (xy 107.95 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f4575a9-d97b-4959-9717-74d303b4f789")
+	)
+	(wire
+		(pts
+			(xy 107.95 105.41) (xy 107.95 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dbbf07ff-3d17-4d37-bd6b-2696be1fa9c6")
+	)
+	(label "MCU_CHARGE_SOURCE_GPIO"
+		(at 116.84 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5c70d72e-4b07-48da-b997-080d7f34a9fb")
 	)
 	(label "BT_CR2032"
 		(at 154.94 41.91 0)
@@ -4224,6 +4421,16 @@
 			(justify left bottom)
 		)
 		(uuid "bb9b08d2-d482-43b8-ba38-6b732eda73be")
+	)
+	(label "CHARGE_SOURCE_STATUS_OUT"
+		(at 107.95 91.44 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "d752c760-5083-4d70-9608-70ebf7fcdfde")
 	)
 	(symbol
 		(lib_id "CERN:Sensors/ANT-BEAD-868")
@@ -4691,7 +4898,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "248edfc3-daf8-4a5f-aa1e-f50767e2811b")
-		(property "Reference" "U5"
+		(property "Reference" "U6"
 			(at 255.27 33.02 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4809,7 +5016,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "U5")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -4827,7 +5034,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2773444b-450c-4501-8e7a-764969384630")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 157.0833 62.23 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4933,7 +5140,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -4951,7 +5158,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3154ffdc-17d4-4c63-b510-dbe35b1aa84d")
-		(property "Reference" "U1"
+		(property "Reference" "U2"
 			(at 162.56 97.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5189,7 +5396,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "U1")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -5207,7 +5414,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3c40048d-a487-456e-8f03-f564d505bc98")
-		(property "Reference" "J4"
+		(property "Reference" "J2"
 			(at 269.24 119.3799 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5283,7 +5490,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "J4")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -5301,7 +5508,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4591f959-3205-4ba9-aa7c-b52d638173df")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR03"
 			(at 154.94 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -5361,7 +5568,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "#PWR014")
+					(reference "#PWR03")
 					(unit 1)
 				)
 			)
@@ -5379,7 +5586,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "508905e0-6293-40b4-b736-b4140d8fafea")
-		(property "Reference" "#PWR018"
+		(property "Reference" "#PWR06"
 			(at 265.43 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -5440,7 +5647,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "#PWR018")
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -5458,7 +5665,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "5f443ff0-c9c4-4ac0-b587-5ad53ea8c3ae")
-		(property "Reference" "IC2"
+		(property "Reference" "IC1"
 			(at 205.74 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5951,7 +6158,89 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "IC2")
+					(reference "IC1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Small")
+		(at 107.95 101.6 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "716f973c-5e0e-4137-a37b-6656cc252017")
+		(property "Reference" "R1"
+			(at 110.49 100.3299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.016 1.016)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 110.49 102.8699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 107.95 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, small symbol"
+			(at 107.95 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ba155c51-f2b3-4d9a-a23e-244cf4a408d0")
+		)
+		(pin "2"
+			(uuid "66fcf3e5-e720-4eae-a007-98fd5e3977a3")
+		)
+		(instances
+			(project "hardware"
+				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
+					(reference "R1")
 					(unit 1)
 				)
 			)
@@ -5969,7 +6258,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "727d568b-dd7f-4ed2-b937-85b2f9ec948e")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR04"
 			(at 176.53 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -6030,7 +6319,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "#PWR016")
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
@@ -6048,7 +6337,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7aaf44c5-bc7d-47b5-9f6f-5cf9e684b9b2")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR09"
 			(at 255.27 116.84 0)
 			(hide yes)
 			(show_name no)
@@ -6109,7 +6398,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "#PWR021")
+					(reference "#PWR09")
 					(unit 1)
 				)
 			)
@@ -6117,7 +6406,7 @@
 	)
 	(symbol
 		(lib_id "CERN:Analog & Interface/INA226AIDGST")
-		(at 212.09 129.54 0)
+		(at 220.98 129.54 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6127,8 +6416,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "8b3ba311-ba6f-405a-9669-d56774b09bfd")
-		(property "Reference" "IC3"
-			(at 220.98 124.46 0)
+		(property "Reference" "IC2"
+			(at 229.87 124.46 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6138,7 +6427,7 @@
 			)
 		)
 		(property "Value" "${DEVICE}"
-			(at 220.98 127 0)
+			(at 229.87 127 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6148,7 +6437,7 @@
 			)
 		)
 		(property "Footprint" "ICs And Semiconductors SMD:SOP50P490X110-10N"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6159,7 +6448,7 @@
 			)
 		)
 		(property "Datasheet" "${CERN_DATASHEET_DIR}\\INA226AIDGST.pdf"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6170,7 +6459,7 @@
 			)
 		)
 		(property "Description" "High-or Low Side Measurement, Bi-Directional Current/Power Monitor with I2C Interface"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6181,7 +6470,7 @@
 			)
 		)
 		(property "Manufacturer" "TEXAS INSTRUMENTS"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6192,7 +6481,7 @@
 			)
 		)
 		(property "Part Number" "INA226AIDGST"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6203,7 +6492,7 @@
 			)
 		)
 		(property "Comment" "INA226AIDGST"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6214,7 +6503,7 @@
 			)
 		)
 		(property "Component Kind" "Standard"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6225,7 +6514,7 @@
 			)
 		)
 		(property "Component Type" "Standard"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6236,7 +6525,7 @@
 			)
 		)
 		(property "Device" "INA226AIDGST"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6247,7 +6536,7 @@
 			)
 		)
 		(property "PackageDescription" "SOP, 0.50mm Pitch; 10 Pin, 3.00mm W X 3.00mm L X 1.10mm H body, IPC Medium Density"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6258,7 +6547,7 @@
 			)
 		)
 		(property "Status" ""
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6269,7 +6558,7 @@
 			)
 		)
 		(property "Part Description" "High-or Low Side Measurement, Bi-Directional Current/Power Monitor with I2C Interface"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6280,7 +6569,7 @@
 			)
 		)
 		(property "Manufacturer Part Number" "INA226AIDGS"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6291,7 +6580,7 @@
 			)
 		)
 		(property "Pin Count" "10"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6302,7 +6591,7 @@
 			)
 		)
 		(property "Case" "MSOP10"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6313,7 +6602,7 @@
 			)
 		)
 		(property "Mounted" "Yes"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6324,7 +6613,7 @@
 			)
 		)
 		(property "Socket" "No"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6335,7 +6624,7 @@
 			)
 		)
 		(property "SMD" "Yes"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6346,7 +6635,7 @@
 			)
 		)
 		(property "PressFit" "No"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6357,7 +6646,7 @@
 			)
 		)
 		(property "Sense" "No"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6368,7 +6657,7 @@
 			)
 		)
 		(property "Sense Comment" ""
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6379,7 +6668,7 @@
 			)
 		)
 		(property "Bonding" "No"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6390,7 +6679,7 @@
 			)
 		)
 		(property "Status Comment" ""
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6401,7 +6690,7 @@
 			)
 		)
 		(property "ComponentHeight" "1.1mm"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6412,7 +6701,7 @@
 			)
 		)
 		(property "Author" "CERN DEM JLC"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6423,7 +6712,7 @@
 			)
 		)
 		(property "HelpURL" "\\\\cern.ch\\dfs\\Applications\\Altium\\Datasheets\\INA226AIDGST.pdf"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6434,7 +6723,7 @@
 			)
 		)
 		(property "ComponentLink1URL" ""
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6445,7 +6734,7 @@
 			)
 		)
 		(property "ComponentLink2URL" ""
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6456,7 +6745,7 @@
 			)
 		)
 		(property "ComponentLink2Description" ""
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6467,7 +6756,7 @@
 			)
 		)
 		(property "ComponentLink1Description" ""
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6478,7 +6767,7 @@
 			)
 		)
 		(property "CreateDate" "2014-10-27 00:00:00 +0200"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6489,7 +6778,7 @@
 			)
 		)
 		(property "LatestRevisionDate" "2022-06-13 00:00:00 +0200"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6500,7 +6789,7 @@
 			)
 		)
 		(property "SCEM" ""
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6511,7 +6800,7 @@
 			)
 		)
 		(property "LatestRevisionDate1" ""
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6522,7 +6811,7 @@
 			)
 		)
 		(property "Field1" ""
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6533,7 +6822,7 @@
 			)
 		)
 		(property "LibSymbol" "Analog & Interface:INA226"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6544,7 +6833,7 @@
 			)
 		)
 		(property "LibFootprint" "ICs And Semiconductors SMD:SOP50P490X110-10N"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6555,7 +6844,7 @@
 			)
 		)
 		(property "Database Name" "ICs And Semiconductors"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6566,7 +6855,7 @@
 			)
 		)
 		(property "Database Table Name" "Analog & Interface"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6577,7 +6866,7 @@
 			)
 		)
 		(property "Part Number Nocolon" "INA226AIDGST"
-			(at 212.09 129.54 0)
+			(at 220.98 129.54 0)
 			(hide yes)
 			(show_name yes)
 			(do_not_autoplace no)
@@ -6620,7 +6909,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "IC3")
+					(reference "IC2")
 					(unit 1)
 				)
 			)
@@ -6638,7 +6927,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "94a2e614-f028-412a-bbc2-30ac953c2bfe")
-		(property "Reference" "J3"
+		(property "Reference" "J1"
 			(at 269.24 102.8699 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6708,7 +6997,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "J3")
+					(reference "J1")
 					(unit 1)
 				)
 			)
@@ -6726,7 +7015,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "9b07e5a5-a71f-4d0f-a7a2-1d853cf6fab5")
-		(property "Reference" "#PWR020"
+		(property "Reference" "#PWR08"
 			(at 265.43 114.3 0)
 			(hide yes)
 			(show_name no)
@@ -6787,7 +7076,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "#PWR020")
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -6805,7 +7094,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "af637ae4-f095-474c-a284-b0960061d358")
-		(property "Reference" "U6"
+		(property "Reference" "U3"
 			(at 190.1033 203.2 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6896,7 +7185,85 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "U6")
+					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 107.95 105.41 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b7c5607c-580c-408c-90d1-14607edc33f2")
+		(property "Reference" "#PWR01"
+			(at 107.95 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 107.95 110.49 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 107.95 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 107.95 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 107.95 105.41 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "522ceae6-28ad-4bf8-bf78-497449dd23eb")
+		)
+		(instances
+			(project "hardware"
+				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -6914,7 +7281,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c3816469-7b06-4bfb-a6cd-8efbac9bb753")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR02"
 			(at 152.4 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -6974,7 +7341,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "#PWR015")
+					(reference "#PWR02")
 					(unit 1)
 				)
 			)
@@ -6992,7 +7359,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cdddceb7-a8c3-409e-a78a-b8097b5af36b")
-		(property "Reference" "#PWR019"
+		(property "Reference" "#PWR07"
 			(at 255.27 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -7053,7 +7420,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "#PWR019")
+					(reference "#PWR07")
 					(unit 1)
 				)
 			)
@@ -7071,7 +7438,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "eb45994e-2f11-4576-aa26-7276227bcbb7")
-		(property "Reference" "#PWR017"
+		(property "Reference" "#PWR05"
 			(at 186.69 133.35 0)
 			(hide yes)
 			(show_name no)
@@ -7132,7 +7499,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "#PWR017")
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -7140,7 +7507,7 @@
 	)
 	(symbol
 		(lib_id "Sensor:BME280")
-		(at 229.87 219.71 270)
+		(at 229.87 218.44 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7150,8 +7517,8 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "f5cf7c46-0961-47a8-b600-25c05f3566d1")
-		(property "Reference" "U4"
-			(at 229.87 204.47 90)
+		(property "Reference" "U5"
+			(at 229.87 203.2 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7161,7 +7528,7 @@
 			)
 		)
 		(property "Value" "BME280"
-			(at 229.87 207.01 90)
+			(at 229.87 205.74 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7171,7 +7538,7 @@
 			)
 		)
 		(property "Footprint" "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering"
-			(at 218.44 257.81 0)
+			(at 218.44 256.54 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7182,7 +7549,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.bosch-sensortec.com/media/boschsensortec/downloads/datasheets/bst-bme280-ds002.pdf"
-			(at 224.79 219.71 0)
+			(at 224.79 218.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7193,7 +7560,7 @@
 			)
 		)
 		(property "Description" "3-in-1 sensor, humidity, pressure, temperature, I2C and SPI interface, 1.71-3.6V, LGA-8"
-			(at 229.87 219.71 0)
+			(at 229.87 218.44 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7230,7 +7597,7 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "U4")
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -7248,7 +7615,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fd0fc08e-cca4-4013-b062-27b858284e4a")
-		(property "Reference" "U3"
+		(property "Reference" "U4"
 			(at 190.5 48.2599 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7330,28 +7697,14 @@
 		(instances
 			(project "hardware"
 				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
-					(reference "U3")
+					(reference "U4")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(group ""
-		(uuid "302b611c-74c0-4a58-82f9-1722362ec817")
-		(members "508905e0-6293-40b4-b736-b4140d8fafea" "521db935-88e3-4f88-9344-9890f2a91e42"
-			"94a2e614-f028-412a-bbc2-30ac953c2bfe" "958028a8-9da6-417f-92e5-57c964142bdd"
-			"cdddceb7-a8c3-409e-a78a-b8097b5af36b"
-		)
-	)
-	(group ""
-		(uuid "302b611c-74c0-4a58-82f9-1722362ec817")
-		(members "508905e0-6293-40b4-b736-b4140d8fafea" "521db935-88e3-4f88-9344-9890f2a91e42"
-			"94a2e614-f028-412a-bbc2-30ac953c2bfe" "958028a8-9da6-417f-92e5-57c964142bdd"
-			"cdddceb7-a8c3-409e-a78a-b8097b5af36b"
-		)
-	)
-	(group ""
-		(uuid "b10b0eef-d2da-4ac6-ab1d-3c2160e0d275")
+		(uuid "3ab011fb-5701-4790-b0fe-4a88af7e3f98")
 		(members "26d9544b-27f3-4b3a-8570-83aa2c40ab68" "3c40048d-a487-456e-8f03-f564d505bc98"
 			"7aaf44c5-bc7d-47b5-9f6f-5cf9e684b9b2" "9b07e5a5-a71f-4d0f-a7a2-1d853cf6fab5"
 			"9bfed1da-3b25-41de-ad60-ac9b284bc9f9" "aab55db9-cc80-4924-ae23-3bb70ee00405"
@@ -7359,11 +7712,10 @@
 		)
 	)
 	(group ""
-		(uuid "b10b0eef-d2da-4ac6-ab1d-3c2160e0d275")
-		(members "26d9544b-27f3-4b3a-8570-83aa2c40ab68" "3c40048d-a487-456e-8f03-f564d505bc98"
-			"7aaf44c5-bc7d-47b5-9f6f-5cf9e684b9b2" "9b07e5a5-a71f-4d0f-a7a2-1d853cf6fab5"
-			"9bfed1da-3b25-41de-ad60-ac9b284bc9f9" "aab55db9-cc80-4924-ae23-3bb70ee00405"
-			"b93814c8-b578-4e78-8b7c-3d92912f4cf2"
+		(uuid "80d55541-4124-46e5-b4f1-90f1171f930b")
+		(members "508905e0-6293-40b4-b736-b4140d8fafea" "521db935-88e3-4f88-9344-9890f2a91e42"
+			"94a2e614-f028-412a-bbc2-30ac953c2bfe" "958028a8-9da6-417f-92e5-57c964142bdd"
+			"cdddceb7-a8c3-409e-a78a-b8097b5af36b"
 		)
 	)
 	(sheet_instances

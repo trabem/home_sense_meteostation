@@ -611,12 +611,372 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Availability",
+          "name": "Availability",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Bonding",
+          "name": "Bonding",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Case",
+          "name": "Case",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Check_prices",
+          "name": "Check_prices",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Comment",
+          "name": "Comment",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Component Kind",
+          "name": "Component Kind",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Component Type",
+          "name": "Component Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "ComponentHeight",
+          "name": "ComponentHeight",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "ComponentLink1Description",
+          "name": "ComponentLink1Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "ComponentLink1URL",
+          "name": "ComponentLink1URL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "ComponentLink2Description",
+          "name": "ComponentLink2Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "ComponentLink2URL",
+          "name": "ComponentLink2URL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "CreateDate",
+          "name": "CreateDate",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Database Name",
+          "name": "Database Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Database Table Name",
+          "name": "Database Table Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Device",
+          "name": "Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Field1",
+          "name": "Field1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Height",
+          "name": "Height",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "HelpURL",
+          "name": "HelpURL",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LatestRevisionDate",
+          "name": "LatestRevisionDate",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LatestRevisionDate1",
+          "name": "LatestRevisionDate1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LibFootprint",
+          "name": "LibFootprint",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LibSymbol",
+          "name": "LibSymbol",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MANUFACTURER",
+          "name": "MANUFACTURER",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MAXIMUM_PACKAGE_HEIGHT",
+          "name": "MAXIMUM_PACKAGE_HEIGHT",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MF",
+          "name": "MF",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MP",
+          "name": "MP",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer Part Number",
+          "name": "Manufacturer Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Name",
+          "name": "Manufacturer_Name",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer_Part_Number",
+          "name": "Manufacturer_Part_Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mounted",
+          "name": "Mounted",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Part Number",
+          "name": "Mouser Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Mouser Price/Stock",
+          "name": "Mouser Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PARTREV",
+          "name": "PARTREV",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Package",
+          "name": "Package",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PackageDescription",
+          "name": "PackageDescription",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part Description",
+          "name": "Part Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part Number",
+          "name": "Part Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Part Number Nocolon",
+          "name": "Part Number Nocolon",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Pin Count",
+          "name": "Pin Count",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PressFit",
+          "name": "PressFit",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Price",
+          "name": "Price",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SCEM",
+          "name": "SCEM",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SMD",
+          "name": "SMD",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "STANDARD",
+          "name": "STANDARD",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sense",
+          "name": "Sense",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sense Comment",
+          "name": "Sense Comment",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Type",
+          "name": "Sim.Type",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "SnapEDA_Link",
+          "name": "SnapEDA_Link",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Socket",
+          "name": "Socket",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Status",
+          "name": "Status",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Status Comment",
+          "name": "Status Comment",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Author",
+          "name": "Author",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Arrow Price/Stock",
+          "name": "Arrow Price/Stock",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Arrow Part Number",
+          "name": "Arrow Part Number",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -666,7 +1026,7 @@
         "uuid": "85046142-a8d8-4f38-9e10-1de8a043d2fb"
       }
     ],
-    "used_designators": "U1-9,BAT1,#PWR1-61,BT1-2,L1-4,TH1,J1-8,C1-16,R1-25,#FLG1-10,IC1-4,ANT1,Q1-5,F1-2,D1-6",
+    "used_designators": "U1-9,BAT1,#PWR1-71,BT1-2,L1-4,TH1,J1-10,C1-20,R1-32,#FLG1-12,IC1-4,ANT1,Q1-8,F1-2,D1-8",
     "variants": []
   },
   "sheets": [
