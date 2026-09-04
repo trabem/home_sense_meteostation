@@ -10,4 +10,5 @@
 	(lib (name "TPS2121RUXT") (type "KiCad") (uri "${KIPRJMOD}/symbols/TPS2121RUXT") (options "") (descr ""))
 	(lib (name "USB4105-GF-A-060") (type "KiCad") (uri "${KIPRJMOD}/symbols/USB4105-GF-A-060") (options "") (descr ""))
 	(lib (name "ul_IHLP2525CZER4R7M01") (type "KiCad") (uri "${KIPRJMOD}/symbols/ul_IHLP2525CZER4R7M01") (options "") (descr ""))
+	(lib (name "E22-900M22S") (type "KiCad") (uri "${KIPRJMOD}/symbols/E22-900M22S") (options "") (descr ""))
 )
