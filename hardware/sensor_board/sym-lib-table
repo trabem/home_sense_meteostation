@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "BME280_Mod") (type "KiCad") (uri "${KIPRJMOD}/symbols/BME280_Mod/BME280_Mod.kicad_sym") (options "") (descr ""))
+	(lib (name "CJMCU-3935_KiCad") (type "KiCad") (uri "${KIPRJMOD}/symbols/CJMCU-3935_KiCad") (options "") (descr ""))
+)
