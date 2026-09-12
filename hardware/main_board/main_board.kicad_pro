@@ -268,7 +268,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "1"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -579,7 +579,56 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "HeavyPower",
+        "pattern": "/Power/BAT_RAW"
+      },
+      {
+        "netclass": "HeavyPower",
+        "pattern": "BAT_FUSED"
+      },
+      {
+        "netclass": "HeavyPower",
+        "pattern": "BAT_SYSTEM"
+      },
+      {
+        "netclass": "HeavyPower",
+        "pattern": "/Power/CHARGER_IN"
+      },
+      {
+        "netclass": "HeavyPower",
+        "pattern": "/Power/LX_SW"
+      },
+      {
+        "netclass": "HeavyPower",
+        "pattern": "Net-(IC5-VS)"
+      },
+      {
+        "netclass": "HeavyPower",
+        "pattern": "SOLAR+"
+      },
+      {
+        "netclass": "HeavyPower",
+        "pattern": "SOLAR_IN"
+      },
+      {
+        "netclass": "HeavyPower",
+        "pattern": "/Power/USB_5V"
+      },
+      {
+        "netclass": "HeavyPower",
+        "pattern": "Net-(U5-LX1)"
+      },
+      {
+        "netclass": "HeavyPower",
+        "pattern": "Net-(U5-LX2)"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+3V3"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -613,6 +662,12 @@
     "bom_settings": {
       "exclude_dnp": false,
       "fields_ordered": [
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": true
+        },
         {
           "group_by": false,
           "label": "Reference",
@@ -671,7 +726,7 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -698,10 +753,10 @@
           "show": false
         },
         {
-          "group_by": false,
+          "group_by": true,
           "label": "Comment",
           "name": "Comment",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -1023,12 +1078,6 @@
         },
         {
           "group_by": false,
-          "label": "#",
-          "name": "${ITEM_NUMBER}",
-          "show": false
-        },
-        {
-          "group_by": false,
           "label": "Arrow Part Number",
           "name": "Arrow Part Number",
           "show": false
@@ -1038,6 +1087,12 @@
           "label": "Purchase-URL",
           "name": "Purchase-URL",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Why",
+          "name": "Why",
+          "show": false
         }
       ],
       "filter_string": "",
@@ -1045,7 +1100,7 @@
       "include_excluded_from_bom": true,
       "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "${ITEM_NUMBER}"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -1093,7 +1148,7 @@
         "uuid": "85046142-a8d8-4f38-9e10-1de8a043d2fb"
       }
     ],
-    "used_designators": "U1-9,BAT1,#PWR1-71,BT1-2,AE1-2,L1-4,TH1,J1-10,C1-20,R1-32,#FLG1-12,IC1-5,ANT1,Q1-8,F1-2,D1-8",
+    "used_designators": "U1-9,BAT1,#PWR1-73,BT1-2,AE1-2,L1-4,TH1,J1-10,C1-23,R1-32,#FLG1-12,IC1-5,ANT1,Q1-8,F1-2,D1-8,SW1-2",
     "variants": []
   },
   "sheets": [
