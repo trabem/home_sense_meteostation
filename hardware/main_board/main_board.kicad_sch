@@ -3875,7 +3875,7 @@
 		(uuid "cf807277-56c8-4e20-8834-dad78cc649cc")
 	)
 	(junction
-		(at 86.36 107.95)
+		(at 88.9 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "da70973f-b346-44ac-b1c4-33cd3c987452")
@@ -4512,7 +4512,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 107.95) (xy 86.36 109.22)
+			(xy 88.9 107.95) (xy 88.9 109.22)
 		)
 		(stroke
 			(width 0)
@@ -4602,7 +4602,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 107.95) (xy 86.36 107.95)
+			(xy 78.74 107.95) (xy 88.9 107.95)
 		)
 		(stroke
 			(width 0)
@@ -4932,7 +4932,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 106.68) (xy 86.36 107.95)
+			(xy 88.9 106.68) (xy 88.9 107.95)
 		)
 		(stroke
 			(width 0)
@@ -10066,7 +10066,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 86.36 101.6 0)
+		(at 88.9 101.6 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -10078,7 +10078,7 @@
 		(fields_autoplaced yes)
 		(uuid "9d5b84ac-0233-4145-a18d-ca9eea961b3f")
 		(property "Reference" "#PWR015"
-			(at 86.36 105.41 0)
+			(at 88.9 105.41 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10089,7 +10089,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 86.36 96.52 0)
+			(at 88.9 96.52 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10099,7 +10099,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 101.6 0)
+			(at 88.9 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10110,7 +10110,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 101.6 0)
+			(at 88.9 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10121,7 +10121,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 86.36 101.6 0)
+			(at 88.9 101.6 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10228,7 +10228,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small")
-		(at 86.36 104.14 0)
+		(at 88.9 104.14 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -10239,7 +10239,7 @@
 		(dnp no)
 		(uuid "9fa60ff5-3f6d-4545-8f12-da832001575c")
 		(property "Reference" "R10"
-			(at 91.44 104.14 90)
+			(at 93.98 104.14 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10249,7 +10249,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 88.9 104.14 90)
+			(at 91.44 104.14 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -10259,7 +10259,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 86.36 104.14 0)
+			(at 88.9 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10270,7 +10270,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 104.14 0)
+			(at 88.9 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10281,7 +10281,7 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
-			(at 86.36 104.14 0)
+			(at 88.9 104.14 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11023,7 +11023,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 86.36 114.3 0)
+		(at 88.9 114.3 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -11034,7 +11034,7 @@
 		(fields_autoplaced yes)
 		(uuid "be87956f-f0cb-4ac5-984c-1bd99fe6e8ea")
 		(property "Reference" "#PWR016"
-			(at 86.36 120.65 0)
+			(at 88.9 120.65 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11045,7 +11045,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 86.3599 118.11 90)
+			(at 88.8999 118.11 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11056,7 +11056,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 86.36 114.3 0)
+			(at 88.9 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11067,7 +11067,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 114.3 0)
+			(at 88.9 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11078,7 +11078,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 86.36 114.3 0)
+			(at 88.9 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12199,7 +12199,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 86.36 111.76 0)
+		(at 88.9 111.76 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -12210,7 +12210,7 @@
 		(dnp no)
 		(uuid "f16b141a-6abb-4068-8af6-bf6a8eca5cf0")
 		(property "Reference" "C6"
-			(at 88.9 113.0365 0)
+			(at 91.44 113.0365 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12221,7 +12221,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 88.9 110.4965 0)
+			(at 91.44 110.4965 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12232,7 +12232,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 86.36 111.76 0)
+			(at 88.9 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12243,7 +12243,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 86.36 111.76 0)
+			(at 88.9 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12254,7 +12254,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 86.36 111.76 0)
+			(at 88.9 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12265,7 +12265,7 @@
 			)
 		)
 		(property "Comment" "X7R, ±10%, ≥10 V"
-			(at 86.36 111.76 0)
+			(at 88.9 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

@@ -544,9 +544,9 @@
         "clearance": 0.2,
         "name": "HeavyPower",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 0,
+        "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 1.5,
+        "track_width": 1.0,
         "tuning_profile": "",
         "via_diameter": 1.0,
         "via_drill": 0.5
@@ -555,18 +555,27 @@
         "clearance": 0.2,
         "name": "Power",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 1,
+        "priority": 2,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.75,
+        "track_width": 0.5,
         "tuning_profile": "",
         "via_diameter": 0.8,
         "via_drill": 0.4
       },
       {
         "clearance": 0.2,
+        "name": "SW_Node",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.8,
+        "tuning_profile": ""
+      },
+      {
+        "clearance": 0.2,
         "name": "Signal",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
+        "priority": 3,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.25,
         "tuning_profile": "",
@@ -597,7 +606,7 @@
         "pattern": "/Power/CHARGER_IN"
       },
       {
-        "netclass": "HeavyPower",
+        "netclass": "SW_Node",
         "pattern": "/Power/LX_SW"
       },
       {
