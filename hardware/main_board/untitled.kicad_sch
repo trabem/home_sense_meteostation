@@ -4259,12 +4259,6 @@
 		(uuid "9db17d40-4ed6-439b-95b9-0e8746b7d8e6")
 	)
 	(junction
-		(at 163.83 66.04)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "a33a5f4c-bd85-4b63-b0f7-c3cf01a27803")
-	)
-	(junction
 		(at 50.8 27.94)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4762,16 +4756,6 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 64.77) (xy 163.83 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54168efe-0095-4c93-a4db-6e33f4998587")
-	)
-	(wire
-		(pts
 			(xy 260.35 57.15) (xy 260.35 60.96)
 		)
 		(stroke
@@ -4909,16 +4893,6 @@
 			(type default)
 		)
 		(uuid "6f135bd0-6443-4108-851e-1cdc7d89afe3")
-	)
-	(wire
-		(pts
-			(xy 166.37 66.04) (xy 163.83 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "72d899e1-4112-4cc1-a63a-e7d48182d15d")
 	)
 	(wire
 		(pts
@@ -5092,7 +5066,7 @@
 	)
 	(wire
 		(pts
-			(xy 163.83 66.04) (xy 161.29 66.04)
+			(xy 161.29 66.04) (xy 166.37 66.04)
 		)
 		(stroke
 			(width 0)
@@ -11333,83 +11307,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:TestPoint_Small")
-		(at 163.83 64.77 270)
-		(mirror x)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b0048951-32d5-48b3-a81a-e7b7dc464b9a")
-		(property "Reference" "TP6"
-			(at 163.83 59.69 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "TP_CHARGER_IN"
-			(at 163.83 62.23 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-			(at 163.83 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 163.83 59.69 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "test point"
-			(at 163.83 64.77 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "85610635-518c-4dee-9fbb-af950b743450")
-		)
-		(instances
-			(project "main_board"
-				(path "/85046142-a8d8-4f38-9e10-1de8a043d2fb"
-					(reference "TP6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R_Small")
 		(at 237.49 129.54 90)
 		(unit 1)
@@ -13740,17 +13637,15 @@
 			"3839569d-6729-4db8-92d1-d82940f5ec1b" "384afe8d-7715-41b3-9dbb-7d007ff7b31c"
 			"386d9a97-0abb-461f-a37a-bd9f4716160b" "43456492-ceee-4855-8d5d-9fe5619975d4"
 			"4b4e7ee5-69e0-411c-9784-4df04a015421" "53a1904e-b420-4a24-8223-13aaf9ad85f0"
-			"54168efe-0095-4c93-a4db-6e33f4998587" "5535e3e1-4219-4481-9441-cfeb2b9e2c0a"
-			"5a51a076-12ab-48b1-a820-b518d063c33c" "5e0f2bb3-bbb2-4c76-8d0d-62ad4f2f65e9"
-			"64fd5779-d922-4693-96b7-b0e3da5662f5" "6c35acfa-cbdc-47be-928e-d4e991160724"
-			"6db4b4b3-7d7d-4b4c-b0a6-5804317bc59a" "6e1904c1-4656-414e-9f3f-afce59d73ad6"
-			"72d899e1-4112-4cc1-a63a-e7d48182d15d" "819a5a45-e09b-46a4-aeb7-321f80529bf6"
+			"5535e3e1-4219-4481-9441-cfeb2b9e2c0a" "5a51a076-12ab-48b1-a820-b518d063c33c"
+			"5e0f2bb3-bbb2-4c76-8d0d-62ad4f2f65e9" "64fd5779-d922-4693-96b7-b0e3da5662f5"
+			"6c35acfa-cbdc-47be-928e-d4e991160724" "6db4b4b3-7d7d-4b4c-b0a6-5804317bc59a"
+			"6e1904c1-4656-414e-9f3f-afce59d73ad6" "819a5a45-e09b-46a4-aeb7-321f80529bf6"
 			"84f46e33-2674-437a-aa40-a07343c50c38" "8f8e6347-d0c7-4d8f-81ef-4b2b457592a6"
 			"92db74ce-3153-4f7f-8562-2c0d05faa6eb" "93854cf9-6a4c-40f1-b36e-a25a84901c64"
 			"9ae6dfa6-1b81-4fbf-b74b-88b41992d5f7" "9e571e7b-3b84-4846-8b82-ef9d06d7a997"
-			"a33a5f4c-bd85-4b63-b0f7-c3cf01a27803" "a44ee3d6-54ec-48df-8d99-6b0895fb1a91"
-			"aaf31eaf-ced7-4cfb-9e3e-6cc7cdf66f11" "ae9d0504-f800-48f9-b41f-6dad09f80aad"
-			"b0048951-32d5-48b3-a81a-e7b7dc464b9a" "b0e7d2bc-5567-47d2-b0e3-d24d2aec3f8b"
+			"a44ee3d6-54ec-48df-8d99-6b0895fb1a91" "aaf31eaf-ced7-4cfb-9e3e-6cc7cdf66f11"
+			"ae9d0504-f800-48f9-b41f-6dad09f80aad" "b0e7d2bc-5567-47d2-b0e3-d24d2aec3f8b"
 			"b8fe9021-575f-4e84-928b-7c207ea4ba68" "be04fb32-50aa-486b-99da-5feceadfd928"
 			"ca51867c-a114-49f7-a05f-3abd1f64d918" "d116d68b-02a0-419b-af4c-d373d297ec5a"
 			"d2c07319-293e-457d-99ec-bb43702ccc78" "d849c0d2-444b-4c8b-b23e-add3a1828110"
