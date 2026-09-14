@@ -686,6 +686,129 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector:TestPoint_Small"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0.762)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "TP"
+				(at 0 3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "TestPoint_Small"
+				(at 0 2.032 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 5.08 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "test point"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "test point tp"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Pin* Test*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TestPoint_Small_0_1"
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TestPoint_Small_1_1"
+				(pin passive line
+					(at 0 0 90)
+					(length 0)
+					(name "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Connector_Generic:Conn_01x02"
 			(pin_names
 				(offset 1.016)
@@ -3809,6 +3932,12 @@
 		(uuid "0a05b0f8-9744-4003-8221-349c0034ada7")
 	)
 	(junction
+		(at 55.88 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "16bf33e3-a02c-4b6b-b4b0-71e6f3a21441")
+	)
+	(junction
 		(at 74.93 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4292,6 +4421,16 @@
 	)
 	(wire
 		(pts
+			(xy 59.69 73.66) (xy 55.88 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62032db8-9efe-466c-bb62-8552b6f2bde3")
+	)
+	(wire
+		(pts
 			(xy 55.88 27.94) (xy 55.88 30.48)
 		)
 		(stroke
@@ -4679,6 +4818,16 @@
 			(type default)
 		)
 		(uuid "af2c52f1-c2a7-4d0d-aca3-4484cc8ad686")
+	)
+	(wire
+		(pts
+			(xy 55.88 71.12) (xy 55.88 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b67e7214-1fc0-4129-8fb6-fc7df31daa2c")
 	)
 	(wire
 		(pts
@@ -9183,6 +9332,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint_Small")
+		(at 59.69 73.66 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8911399a-8c94-4901-819a-c51443d45adc")
+		(property "Reference" "TP10"
+			(at 65.532 74.676 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TP_GND_RF"
+			(at 65.532 72.136 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 59.69 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 59.69 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "test point"
+			(at 59.69 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b23b6843-af5f-4525-ac91-8fbd6ff7360d")
+		)
+		(instances
+			(project "main_board"
+				(path "/c188e145-349d-484e-a5ed-94efd42d01f5"
+					(reference "TP10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 236.22 87.63 270)
 		(unit 1)
@@ -11102,7 +11328,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 55.88 71.12 0)
+		(at 55.88 73.66 0)
 		(mirror y)
 		(unit 1)
 		(body_style 1)
@@ -11113,7 +11339,7 @@
 		(dnp no)
 		(uuid "c1264189-dbdb-4a76-ba49-c5bc944e0368")
 		(property "Reference" "#PWR010"
-			(at 55.88 77.47 0)
+			(at 55.88 80.01 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11124,7 +11350,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 55.8799 74.93 90)
+			(at 55.8799 77.47 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -11135,7 +11361,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 55.88 71.12 0)
+			(at 55.88 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11146,7 +11372,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 55.88 71.12 0)
+			(at 55.88 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11157,7 +11383,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 55.88 71.12 0)
+			(at 55.88 73.66 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12829,15 +13055,16 @@
 		(members "0225d914-d765-496e-9582-73ffdd74055c" "03c4cab6-6c09-4cf1-9549-473507fa68fe"
 			"0422116d-5074-45fc-80d8-820c768ad917" "083d04f3-e587-461c-8ba0-c13e53402020"
 			"113aeb92-e46f-40ed-bd7d-62368046a4bd" "134f9fee-9054-457e-9bb8-6b6e1295af7a"
-			"16155f65-256a-4ea7-bec3-5b9b045cd330" "19ab73e4-bc5b-4864-ac6d-62388520e02c"
-			"1bbc02cd-1e9b-4023-b0a0-1f2260bc69ab" "1e106cdd-49bc-4cc3-ba8c-91a0c60a2d9e"
-			"275a0193-e6fa-487d-a717-21a96c1f61ba" "297f4761-4462-4170-87bb-e8c8ef9e76a1"
-			"2e4da865-29f6-4bd1-b4cf-b40c526e7e11" "2f756d60-1b35-4199-bb02-bcadc4bb8d59"
-			"307f79be-0e2a-49ad-9417-b6a072f862d8" "37c88614-624c-4cbc-a9ba-b282e3c5f7b2"
-			"3a119ae1-638f-4c5d-bec3-c70eb130e683" "3f8adb90-bcd0-470c-a794-7af98dd90b83"
-			"41bc5960-3101-4704-9075-af10071a797c" "49194eb5-692b-4ba1-8ef2-f23034a67c94"
-			"4d6e359a-efac-481e-bf7e-0d8f49461477" "4f6617a8-875a-46ce-835c-d3e49d7aabe5"
-			"5bbc5b9f-0ba1-47ec-8af7-acfb001eb1d4" "63462031-cd51-4a31-a75f-030f5d628ae4"
+			"16155f65-256a-4ea7-bec3-5b9b045cd330" "16bf33e3-a02c-4b6b-b4b0-71e6f3a21441"
+			"19ab73e4-bc5b-4864-ac6d-62388520e02c" "1bbc02cd-1e9b-4023-b0a0-1f2260bc69ab"
+			"1e106cdd-49bc-4cc3-ba8c-91a0c60a2d9e" "275a0193-e6fa-487d-a717-21a96c1f61ba"
+			"297f4761-4462-4170-87bb-e8c8ef9e76a1" "2e4da865-29f6-4bd1-b4cf-b40c526e7e11"
+			"2f756d60-1b35-4199-bb02-bcadc4bb8d59" "307f79be-0e2a-49ad-9417-b6a072f862d8"
+			"37c88614-624c-4cbc-a9ba-b282e3c5f7b2" "3a119ae1-638f-4c5d-bec3-c70eb130e683"
+			"3f8adb90-bcd0-470c-a794-7af98dd90b83" "41bc5960-3101-4704-9075-af10071a797c"
+			"49194eb5-692b-4ba1-8ef2-f23034a67c94" "4d6e359a-efac-481e-bf7e-0d8f49461477"
+			"4f6617a8-875a-46ce-835c-d3e49d7aabe5" "5bbc5b9f-0ba1-47ec-8af7-acfb001eb1d4"
+			"62032db8-9efe-466c-bb62-8552b6f2bde3" "63462031-cd51-4a31-a75f-030f5d628ae4"
 			"63821ea0-9264-4ab2-a0e7-35959071552e" "6781b633-a1e5-4a82-aeff-2637d55213fa"
 			"681d5124-6748-4ced-8ab4-53ca74655802" "6bf3a4d0-9919-450c-8e28-8261ae80585a"
 			"6de8628e-a82b-49a8-b5e2-a91b9878f396" "7218fad4-4b83-42b2-9386-8270ad7146f8"
@@ -12846,10 +13073,11 @@
 			"7bd56264-eab0-4e11-94a0-97319f35d6ac" "7c087480-bc0f-4bcb-bca7-5b245a056342"
 			"8302702b-c6f7-4432-914c-84afed3b04cb" "84ce62cf-80e1-4a02-a711-e17b2517579a"
 			"87c8591a-2414-413a-892d-de1b675c2120" "88e5e9c2-fbb9-42ba-bf50-35309971f1b2"
-			"8de96f5e-7a5f-433d-8d27-861beaf929ea" "9b5263d4-47c8-4543-8404-aeb70e442a5e"
-			"a30ebfd5-8556-420e-a85b-9e41fd03a8dd" "a454f0c8-0178-4877-89f9-d8804a7784ae"
-			"ae02fce1-5d38-4ffd-8a8c-448e73865403" "aeb43d10-145f-4ba8-9ded-732c7d0fbe7e"
-			"af2c52f1-c2a7-4d0d-aca3-4484cc8ad686" "b1705b6d-3e2f-4144-abe5-5c96bf92c17c"
+			"8911399a-8c94-4901-819a-c51443d45adc" "8de96f5e-7a5f-433d-8d27-861beaf929ea"
+			"9b5263d4-47c8-4543-8404-aeb70e442a5e" "a30ebfd5-8556-420e-a85b-9e41fd03a8dd"
+			"a454f0c8-0178-4877-89f9-d8804a7784ae" "ae02fce1-5d38-4ffd-8a8c-448e73865403"
+			"aeb43d10-145f-4ba8-9ded-732c7d0fbe7e" "af2c52f1-c2a7-4d0d-aca3-4484cc8ad686"
+			"b1705b6d-3e2f-4144-abe5-5c96bf92c17c" "b67e7214-1fc0-4129-8fb6-fc7df31daa2c"
 			"b763b5e5-ebca-4580-8da7-27c65c442b92" "b86c327f-a85d-4d1a-8e2d-fbfa0cc3c3e2"
 			"b8f4bbdd-a851-4aa2-a24f-dc8ff6999511" "bafe1022-fb04-4374-b31e-a1180c9b7ebc"
 			"bca2c933-3e65-4613-98fe-527815b6f2de" "bcd09b49-0b70-4f94-95b3-737690982297"
