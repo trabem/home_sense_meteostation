@@ -643,7 +643,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "plots_pcb/",
+      "plot": "drills/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
