@@ -643,7 +643,7 @@
     "last_paths": {
       "idf": "",
       "netlist": "",
-      "plot": "drills/",
+      "plot": "gerber/",
       "specctra_dsn": "",
       "step": "",
       "vrml": ""
