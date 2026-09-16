@@ -6153,6 +6153,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 246.38 90.17 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a12a934c-a3ca-45d4-b9be-dfa7e10e1418")
 		)
@@ -6322,6 +6333,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 161.29 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "b38022da-7b3e-4485-a872-e1cac6452408")
 		)
@@ -6416,6 +6438,17 @@
 			)
 		)
 		(property "Comment" "current/charge setting resistor, ±1%, low-TCR, ≥1 W"
+			(at 203.2 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 203.2 95.25 0)
 			(hide yes)
 			(show_name no)
@@ -6640,6 +6673,17 @@
 				(justify bottom)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 179.07 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "07ebb244-9001-4491-8fb0-5790d9aee9f5")
 		)
@@ -6810,6 +6854,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 116.84 36.83 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "cb19afc8-2cd2-45ba-ae31-2aceeb21f32d")
 		)
@@ -6881,6 +6936,17 @@
 		)
 		(property "Description" "test point"
 			(at 236.22 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
+			(at 236.22 134.62 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7293,6 +7359,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 149.86 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "8cd770b2-dd6d-490f-9bbf-8aa75ea16d35")
 		)
@@ -7621,6 +7698,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 175.26 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "a9e38a67-a00c-4140-ae6a-03a51f434c07")
 		)
@@ -7772,6 +7860,17 @@
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 			(at 138.43 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
+			(at 138.43 147.32 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7942,6 +8041,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 77.47 144.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "3703bcd9-a27d-4d57-8630-f40fbe5045fe")
 		)
@@ -8039,6 +8149,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 99.06 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "bbce1af3-df7b-414c-920d-898d0ff6be41")
 		)
@@ -8119,6 +8240,17 @@
 			)
 		)
 		(property "Comment" "current sense, ±1%/±0.5%, low-TCR ≤50 ppm/°C, ≥0.5 W recommended"
+			(at 133.35 142.24 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 133.35 142.24 90)
 			(hide yes)
 			(show_name no)
@@ -8365,6 +8497,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 121.92 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "71775786-2b19-4b7b-a109-fd69dd45f707")
 		)
@@ -8590,6 +8733,17 @@
 			)
 		)
 		(property "Description" ""
+			(at 191.77 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 191.77 134.62 0)
 			(hide yes)
 			(show_name no)
@@ -8890,6 +9044,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 35.56 166.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "916fbbbc-9fd3-4677-a0e0-bda6e1f2aeba")
 		)
@@ -9052,6 +9217,17 @@
 			)
 		)
 		(property "Comment" "X7R, ±10%, 16 V"
+			(at 158.75 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 158.75 127 0)
 			(hide yes)
 			(show_name no)
@@ -9234,6 +9410,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 99.06 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "16a0b043-7266-4e8d-8252-915f2b749e11")
 		)
@@ -9305,6 +9492,17 @@
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 66.04 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
+			(at 66.04 45.72 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9397,6 +9595,17 @@
 			)
 		)
 		(property "Comment" "Programming / sensing network — ±1%, do not substitute without recalculation."
+			(at 260.35 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 260.35 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -9655,6 +9864,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 227.33 123.19 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fb994000-51ad-4f14-9c3a-26697263344e")
 		)
@@ -9738,6 +9958,17 @@
 			)
 		)
 		(property "Comment" "Programming / sensing network — ±1%, do not substitute without recalculation."
+			(at 260.35 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 260.35 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -9832,6 +10063,17 @@
 			)
 		)
 		(property "Comment" "X5R/X7R, ≥6.3 V, preferably 10 V; check DC-bias derating"
+			(at 148.59 127 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 148.59 127 0)
 			(hide yes)
 			(show_name no)
@@ -10012,6 +10254,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 233.68 90.17 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "21355e5c-4a21-4669-a70a-3d8166ad389a")
 		)
@@ -10175,6 +10428,17 @@
 					(size 1.27 1.27)
 				)
 				(justify left top)
+			)
+		)
+		(property "Purchase-URL" ""
+			(at 210.82 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
 		)
 		(pin "5"
@@ -10372,6 +10636,17 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 231.14 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 231.14 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -10710,6 +10985,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 162.56 149.86 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "e1d3a5ab-5ba3-4829-9bf3-ccaae91bde73")
 		)
@@ -10960,6 +11246,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 193.04 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e04b7107-eb86-49f2-ab4d-e774b36367f4")
 		)
@@ -11032,6 +11329,17 @@
 		)
 		(property "Description" "Resistor, small symbol"
 			(at 66.04 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
+			(at 66.04 43.18 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11291,6 +11599,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 250.19 62.23 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5ebce21a-0b08-4332-985b-0d585649bdee")
 		)
@@ -11372,6 +11691,17 @@
 			)
 		)
 		(property "Comment" "VOUT feedback divider — precision resistors, ±0.5% or better, ≤50 ppm/°C. Sets 3.3 V output."
+			(at 237.49 129.54 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 237.49 129.54 90)
 			(hide yes)
 			(show_name no)
@@ -11540,6 +11870,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 50.8 27.94 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9fd22dce-1345-4ff5-a842-a5db82ae0034")
 		)
@@ -11609,6 +11950,17 @@
 			)
 		)
 		(property "Description" "Resistor, small symbol"
+			(at 228.6 27.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 228.6 27.94 0)
 			(hide yes)
 			(show_name no)
@@ -11780,6 +12132,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 34.29 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "cf6eeb89-b1f4-4e78-a209-8db4726bdd44")
 		)
@@ -11850,6 +12213,17 @@
 			)
 		)
 		(property "Description" "USB 2.0-only 16P Type-C Receptacle connector"
+			(at 35.56 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 35.56 53.34 0)
 			(hide yes)
 			(show_name no)
@@ -11977,6 +12351,17 @@
 		)
 		(property "Description" "Resettable fuse, polymeric positive temperature coefficient, small symbol"
 			(at 96.52 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
+			(at 96.52 142.24 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12225,6 +12610,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 203.2 85.09 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1890a12c-9565-4efc-86b9-d77cc4b040b1")
 		)
@@ -12308,6 +12704,17 @@
 			)
 		)
 		(property "Comment" "TPS2121 ILIM programming resistor, ±1%. Value change affects current limit."
+			(at 161.29 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 161.29 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -12560,6 +12967,17 @@
 				(justify left top)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 113.03 64.77 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "7"
 			(uuid "982873b2-8a99-49ae-b28b-e5de33b56386")
 		)
@@ -12749,6 +13167,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 154.94 142.24 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9a55d9dc-87c2-41fe-99c9-e1d2c1d2185e")
 		)
@@ -12827,6 +13256,17 @@
 			)
 		)
 		(property "Comment" "current sense, ±1% або краще, low-TCR ≤50 ppm/°C, ≥0.5 W"
+			(at 53.34 93.98 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 53.34 93.98 90)
 			(hide yes)
 			(show_name no)
@@ -12995,6 +13435,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 191.77 120.65 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f7c9fef5-de11-472a-8a29-0d950f68197b")
 		)
@@ -13065,6 +13516,17 @@
 		)
 		(property "Description" "test point"
 			(at 91.44 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
+			(at 91.44 142.24 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13162,6 +13624,17 @@
 				)
 			)
 		)
+		(property "Purchase-URL" ""
+			(at 129.54 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f45cf5d1-fb9f-4ec8-bc56-78214111772b")
 		)
@@ -13233,6 +13706,17 @@
 		)
 		(property "Description" "test point"
 			(at 58.42 93.98 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
+			(at 58.42 93.98 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13321,6 +13805,17 @@
 			)
 		)
 		(property "Comment" "X5R/X7R, ≥6.3 V, preferably 10 V"
+			(at 248.92 100.33 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
 			(at 248.92 100.33 90)
 			(hide yes)
 			(show_name no)
@@ -13482,6 +13977,17 @@
 		)
 		(property "Description" "Schottky diode, small symbol"
 			(at 195.58 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Purchase-URL" ""
+			(at 195.58 83.82 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

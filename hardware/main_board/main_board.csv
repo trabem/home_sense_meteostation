@@ -2,7 +2,7 @@
 "1","AE1","1","Antenna","RF_Antenna:Texas_SWRA416_868MHz_915MHz",""
 "2","BT1","1","CR2032","Battery:BatteryHolder_Multicomp_BC-2001_1x2032",""
 "3","C1,C4","2","10uF","Capacitor_SMD:C_0603_1608Metric","X5R/X7R, ≥10 V"
-"4","C2,C3,C8,C9,C11,C15,C16,C19,C23","9","100nF","Capacitor_SMD:C_0603_1608Metric","X7R, ±10%, 16 V"
+"4","C2,C3,C8,C9,C11,C15,C16,C19,C23,C24","10","100nF","Capacitor_SMD:C_0603_1608Metric","X7R, ±10%, 16 V"
 "5","C5,C7","2","DNP","Capacitor_SMD:C_0603_1608Metric",""
 "6","C6","1","1uF","Capacitor_SMD:C_0603_1608Metric","X7R, ±10%, ≥10 V"
 "7","C12,C13","2","1uF","Capacitor_SMD:C_0603_1608Metric","X7R, ±10%, 16 V"
@@ -54,3 +54,4 @@
 "53","U1","1","ESP32-C3-WROOM-02","RF_Module:ESP32-C3-WROOM-02",""
 "54","U2","1","DS3231SN","Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",""
 "55","U4","1","TPS631000DRLR","TPS631000DRLR:TPS631000DRLR_TEX",""
+"56","U5","1","PCA9536DR","Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",""

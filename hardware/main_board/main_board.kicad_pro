@@ -645,7 +645,7 @@
       "netlist": "",
       "plot": "gerber/",
       "specctra_dsn": "",
-      "step": "",
+      "step": "main_board.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
