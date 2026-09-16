@@ -4169,12 +4169,6 @@
 		(uuid "386d9a97-0abb-461f-a37a-bd9f4716160b")
 	)
 	(junction
-		(at 135.89 142.24)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4055d1f4-16fd-4662-99a2-b24bc65eb00e")
-	)
-	(junction
 		(at 246.38 100.33)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4311,6 +4305,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d0baaa49-d85f-4b3f-8579-f11520550060")
+	)
+	(junction
+		(at 146.05 142.24)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d9b75963-ec63-4e0d-98f6-7b7a265f55cb")
 	)
 	(junction
 		(at 58.42 93.98)
@@ -4483,16 +4483,6 @@
 			(type default)
 		)
 		(uuid "22c59261-3a6a-420f-a424-87955aba8609")
-	)
-	(wire
-		(pts
-			(xy 140.97 142.24) (xy 154.94 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "238847f6-6324-423d-adf0-8e5c53b68418")
 	)
 	(wire
 		(pts
@@ -5196,6 +5186,16 @@
 	)
 	(wire
 		(pts
+			(xy 140.97 142.24) (xy 154.94 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "adea4f3f-f172-41fe-be4b-7ba6cec04237")
+	)
+	(wire
+		(pts
 			(xy 123.19 43.18) (xy 123.19 49.53)
 		)
 		(stroke
@@ -5253,16 +5253,6 @@
 			(type default)
 		)
 		(uuid "b799c260-937f-4f69-98a6-d5506f92b733")
-	)
-	(wire
-		(pts
-			(xy 135.89 139.7) (xy 135.89 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b8cccc74-5893-4c64-9247-ea106c0fd4c5")
 	)
 	(wire
 		(pts
@@ -7470,84 +7460,6 @@
 			(project "main_board"
 				(path "/85046142-a8d8-4f38-9e10-1de8a043d2fb"
 					(reference "#PWR059")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 135.89 139.7 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "2b8711ab-c171-4cdd-b713-1dc49e6b031b")
-		(property "Reference" "#FLG08"
-			(at 135.89 137.795 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 135.89 134.62 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 135.89 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 135.89 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 135.89 139.7 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "80b21cf7-e664-497d-8c99-8f1aa1636b93")
-		)
-		(instances
-			(project "main_board"
-				(path "/85046142-a8d8-4f38-9e10-1de8a043d2fb"
-					(reference "#FLG08")
 					(unit 1)
 				)
 			)
@@ -11723,6 +11635,84 @@
 		)
 	)
 	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 146.05 142.24 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c5ee5c1c-b98b-4a42-ad71-55efc45055d4")
+		(property "Reference" "#FLG09"
+			(at 146.05 140.335 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 146.05 137.16 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 146.05 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 146.05 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 146.05 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "305d6942-27df-4de4-ba0f-6683bd07a2b1")
+		)
+		(instances
+			(project "main_board"
+				(path "/85046142-a8d8-4f38-9e10-1de8a043d2fb"
+					(reference "#FLG09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x02")
 		(at 34.29 93.98 0)
 		(mirror y)
@@ -13676,45 +13666,45 @@
 			"16a8fed1-dd3b-4e04-9203-64f9bebfa68e" "17a14a58-51e4-442e-a53b-d007ed534f12"
 			"1bb8972a-72fa-4ff3-a843-b0669aa1f173" "1cca1312-97a0-457c-9b92-4b3fbd3a47f6"
 			"21b88c43-9dd0-49d8-b12f-976500069705" "21e8bd7d-03fb-4584-841e-b112026eb770"
-			"234e0044-b750-4ce6-a9c9-f2488e5ac460" "238847f6-6324-423d-adf0-8e5c53b68418"
-			"253a215a-76cd-4072-a87f-5c0cc0763a8e" "2897bde0-24c5-4ca5-98df-5b7ae8e8340a"
-			"293dbedc-25cc-4692-b025-eae82c519ca2" "2b3907e9-85e8-46a7-9543-30abf013a707"
-			"2b8711ab-c171-4cdd-b713-1dc49e6b031b" "32fea740-8fe1-42ce-bfbb-56e24063d0d3"
+			"234e0044-b750-4ce6-a9c9-f2488e5ac460" "253a215a-76cd-4072-a87f-5c0cc0763a8e"
+			"2897bde0-24c5-4ca5-98df-5b7ae8e8340a" "293dbedc-25cc-4692-b025-eae82c519ca2"
+			"2b3907e9-85e8-46a7-9543-30abf013a707" "32fea740-8fe1-42ce-bfbb-56e24063d0d3"
 			"3483fbd8-38eb-44e6-acd1-453a723bfcd1" "34a7cd3c-f7d7-4211-8ab1-43ca9a3b74eb"
 			"3a3c3ed0-c340-4c9b-87bd-6a587e771fe4" "3ae9bfaa-0ceb-422b-883d-3dbb73ab8b91"
 			"3afb402a-f1d5-44a6-af27-ba3e81f12eec" "3c0c4c3e-b9bd-4bfe-a140-1596e5be1725"
 			"3c2e3962-114e-4093-b5c0-5230e4c2b832" "3e35fdc8-6e4c-4330-954a-4e7974b56a81"
 			"3e76926e-0517-41e8-95e7-a72372856a29" "3f06444e-8c45-47d7-980a-855c9e029557"
-			"3f3ae518-854d-49d9-993d-e34cff5abbce" "4055d1f4-16fd-4662-99a2-b24bc65eb00e"
-			"43d17b5b-65b9-4f36-9c1f-a2f43274dec3" "4445992e-9739-458a-8caa-1fb9e46cb5e8"
-			"4aac472e-1794-4d23-b5fc-cd36e534d65b" "4cd94a6d-7ca4-429b-9511-a1e07ab2a1cd"
-			"4e457a33-9846-4ca2-88d7-dd3c147d213b" "4e5fb91e-3d52-47c5-bd41-93a5f23473d3"
-			"4f51702d-c351-4e9e-aae7-da884285e307" "508ce01e-19e3-469d-ad14-33bc81234ac2"
-			"530906cf-dbe6-4374-b7de-262ac380ecbf" "559cfd22-4630-467c-a227-38bd915d9b94"
-			"60d4e61c-f024-4456-82ad-6e8bdd1c6214" "613e7b74-ea0f-44e1-9d0c-6c23d70eaaf2"
-			"61886f4a-d64f-4dc1-9749-4a13145e1a66" "6bc47564-2105-44c4-8d2e-e0c4821f9338"
-			"6be32338-7e36-41ad-b3f9-500ac8466d71" "6e2b87a1-f66d-41b2-863e-c88a4809d801"
-			"6f135bd0-6443-4108-851e-1cdc7d89afe3" "747afc96-20e4-420c-adac-fd0da10fbf00"
-			"768d8a6b-8436-42bf-a7df-e70eac2a8856" "76c9d31c-f683-4cf1-aa2d-97bd2dd03048"
-			"7bff3281-1d3b-4ce9-9da7-fbb3513d895a" "7c521dd6-cfa0-4bc8-b394-b79bbabb6765"
-			"889ec5d3-9bae-4833-a2bd-b164aca7015b" "8a38e827-ed0c-47d0-8d0b-428b312352d6"
-			"8e648a43-fd42-48e3-b6af-1efe384d6401" "9cce6542-8720-42f2-b79f-fd94a9f0b09c"
-			"9db17d40-4ed6-439b-95b9-0e8746b7d8e6" "a0e5d3d8-4035-4df3-9188-3d6e4219eec4"
-			"a8060f75-81ad-4382-a79e-381c18e39651" "ab302da6-25ab-4a10-b492-2a5ada7f2464"
-			"ac46b45e-6e49-41e2-9824-ee7152146eca" "ac6dfcdc-e30c-46d2-b1e8-fc0f54a02b95"
+			"3f3ae518-854d-49d9-993d-e34cff5abbce" "43d17b5b-65b9-4f36-9c1f-a2f43274dec3"
+			"4445992e-9739-458a-8caa-1fb9e46cb5e8" "4aac472e-1794-4d23-b5fc-cd36e534d65b"
+			"4cd94a6d-7ca4-429b-9511-a1e07ab2a1cd" "4e457a33-9846-4ca2-88d7-dd3c147d213b"
+			"4e5fb91e-3d52-47c5-bd41-93a5f23473d3" "4f51702d-c351-4e9e-aae7-da884285e307"
+			"508ce01e-19e3-469d-ad14-33bc81234ac2" "530906cf-dbe6-4374-b7de-262ac380ecbf"
+			"559cfd22-4630-467c-a227-38bd915d9b94" "60d4e61c-f024-4456-82ad-6e8bdd1c6214"
+			"613e7b74-ea0f-44e1-9d0c-6c23d70eaaf2" "61886f4a-d64f-4dc1-9749-4a13145e1a66"
+			"6bc47564-2105-44c4-8d2e-e0c4821f9338" "6be32338-7e36-41ad-b3f9-500ac8466d71"
+			"6e2b87a1-f66d-41b2-863e-c88a4809d801" "6f135bd0-6443-4108-851e-1cdc7d89afe3"
+			"747afc96-20e4-420c-adac-fd0da10fbf00" "768d8a6b-8436-42bf-a7df-e70eac2a8856"
+			"76c9d31c-f683-4cf1-aa2d-97bd2dd03048" "7bff3281-1d3b-4ce9-9da7-fbb3513d895a"
+			"7c521dd6-cfa0-4bc8-b394-b79bbabb6765" "889ec5d3-9bae-4833-a2bd-b164aca7015b"
+			"8a38e827-ed0c-47d0-8d0b-428b312352d6" "8e648a43-fd42-48e3-b6af-1efe384d6401"
+			"9cce6542-8720-42f2-b79f-fd94a9f0b09c" "9db17d40-4ed6-439b-95b9-0e8746b7d8e6"
+			"a0e5d3d8-4035-4df3-9188-3d6e4219eec4" "a8060f75-81ad-4382-a79e-381c18e39651"
+			"ab302da6-25ab-4a10-b492-2a5ada7f2464" "ac46b45e-6e49-41e2-9824-ee7152146eca"
+			"ac6dfcdc-e30c-46d2-b1e8-fc0f54a02b95" "adea4f3f-f172-41fe-be4b-7ba6cec04237"
 			"b455f17b-80ae-4262-92d2-b4e2811ff082" "b5ca64e6-4f51-4e08-9a45-b5660666fbf6"
-			"b5f78ead-2b1f-4247-ab0f-b54c04e742b3" "b8cccc74-5893-4c64-9247-ea106c0fd4c5"
-			"b9ab236b-0997-496f-b20b-8fc95fda56e2" "c0f61c31-87d9-4105-a779-6a82416b29da"
-			"c324fac1-4b85-45d9-ad6a-bcb0c0c3ae2a" "c37f37d6-0d0e-45b5-ba68-09cbe94aebad"
+			"b5f78ead-2b1f-4247-ab0f-b54c04e742b3" "b9ab236b-0997-496f-b20b-8fc95fda56e2"
+			"c0f61c31-87d9-4105-a779-6a82416b29da" "c324fac1-4b85-45d9-ad6a-bcb0c0c3ae2a"
+			"c37f37d6-0d0e-45b5-ba68-09cbe94aebad" "c5ee5c1c-b98b-4a42-ad71-55efc45055d4"
 			"c986afc5-fdab-4bab-a16f-8719c78f05b8" "cc539286-81e4-4fb6-90d8-33d1e9e92fbe"
 			"cc6939db-a4bc-45df-9c80-2a425d038826" "ccefb941-52fd-40db-9526-72bff9ba321a"
 			"d0baaa49-d85f-4b3f-8579-f11520550060" "d0be3640-09f7-46d7-bccd-6de44ca99449"
 			"d16ae061-ac7f-49b0-ad44-104cfcba8751" "d7b20548-dcde-4a72-abc3-629dae918232"
-			"da27c0ad-63fd-4144-b014-5088c334eb47" "ddab9e3f-8838-432c-a59a-68af22866e86"
-			"e6cee70c-b9da-45d7-9222-4989bdd44bb3" "ea332e8b-2aa6-4d06-9a9a-eafc793075a1"
-			"f01a98c9-c504-434f-9a98-534f9e1d10b5" "f06ada37-503d-49f6-81bb-00cd6d3b8e48"
-			"f1d98eac-7c5e-4143-9bef-3ed00b77e44e" "f4fd546a-d9f6-4f90-ae92-89d127cac204"
-			"fb7f6eb0-88fe-439d-b5ff-386ec3d3925d" "fecbe64d-6e0c-47b7-b903-af26cfdd07a7"
+			"d9b75963-ec63-4e0d-98f6-7b7a265f55cb" "da27c0ad-63fd-4144-b014-5088c334eb47"
+			"ddab9e3f-8838-432c-a59a-68af22866e86" "e6cee70c-b9da-45d7-9222-4989bdd44bb3"
+			"ea332e8b-2aa6-4d06-9a9a-eafc793075a1" "f01a98c9-c504-434f-9a98-534f9e1d10b5"
+			"f06ada37-503d-49f6-81bb-00cd6d3b8e48" "f1d98eac-7c5e-4143-9bef-3ed00b77e44e"
+			"f4fd546a-d9f6-4f90-ae92-89d127cac204" "fb7f6eb0-88fe-439d-b5ff-386ec3d3925d"
+			"fecbe64d-6e0c-47b7-b903-af26cfdd07a7"
 		)
 	)
 	(group ""
