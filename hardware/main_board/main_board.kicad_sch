@@ -3889,7 +3889,7 @@
 	)
 	(text "address: 0x44"
 		(exclude_from_sim no)
-		(at 212.598 44.704 0)
+		(at 196.85 54.102 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3940,7 +3940,7 @@
 	)
 	(text "address: 0x40"
 		(exclude_from_sim no)
-		(at 274.828 46.228 0)
+		(at 260.096 55.372 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4001,7 +4001,7 @@
 		)
 		(uuid "ec710a6d-ccc4-408c-94b3-8283230ddb6c")
 	)
-	(text "footprint DS3231M, він сумісний із DS3231SN"
+	(text "footprint DS3231M сумісний із DS3231SN"
 		(exclude_from_sim no)
 		(at 149.098 58.42 0)
 		(effects
@@ -5719,6 +5719,30 @@
 			)
 		)
 	)
+	(global_label "BAT_SW"
+		(shape input)
+		(at 176.53 36.83 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "40c2dfe6-be06-4bf0-ba45-912b47b86575")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 166.5901 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
 	(global_label "BAT_FUSED"
 		(shape input)
 		(at 176.53 31.75 180)
@@ -5780,30 +5804,6 @@
 		(uuid "a7be88be-baad-442d-a26e-5f4e5b493cc9")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 63.5 165.5452 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-	)
-	(global_label "BAT_SYSTEM"
-		(shape input)
-		(at 176.53 36.83 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "d35a39dc-54a1-4f7a-8367-cdd6aca895b0")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 162.1754 36.83 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14131,9 +14131,7 @@
 	)
 	(group ""
 		(uuid "30e4dce8-eb0d-4a7b-afd6-4c76ff5380b3")
-		(members "41087be8-1307-43c1-b754-e96493624a15" "6eea7035-4f25-4a72-a618-6bd536c5cd82"
-			"d35a39dc-54a1-4f7a-8367-cdd6aca895b0"
-		)
+		(members "41087be8-1307-43c1-b754-e96493624a15" "6eea7035-4f25-4a72-a618-6bd536c5cd82")
 	)
 	(group ""
 		(uuid "325088c5-83a1-4782-acd8-0d0283b5808e")
@@ -14185,13 +14183,13 @@
 		(members "01a73ddd-e1f1-402d-9549-813c976c556e" "10e8ab16-9f55-4e8f-8cf5-1c3deb518086"
 			"13595f4c-2dbe-4409-a59b-82464d33fa12" "2b167bd5-e1bd-4197-a502-864c9a7b95aa"
 			"39b9ed67-e27f-4e18-86b5-da70755efc80" "3ff4b56b-3905-47d8-ba18-f0a2ab7a4737"
-			"4ada11c3-3a60-4087-af6a-a86667fb405f" "59c6c737-c19f-4561-83bf-fb6677f94526"
-			"6de222bc-ddaf-4cf1-9a43-9c920d38dce9" "7df4dcb2-cf00-4608-89ed-0d26f69bee5f"
-			"8b3ba311-ba6f-405a-9669-d56774b09bfd" "9617faaf-6434-4a95-8d89-d22f5108b073"
-			"969bf7c8-949e-4686-a2e2-beec35f0fc5f" "cf807277-56c8-4e20-8834-dad78cc649cc"
-			"d352f9b2-7940-4ae5-a426-046b3ecf4db6" "e4cbf31c-9497-4255-bc42-33dda2f98989"
-			"f1094a68-0f73-42db-a44d-445e356ae712" "fadc9a7b-edb4-4ec2-9615-eb0089a984be"
-			"fe75700f-cfbc-4fba-9d4b-11ffd5ce39b7"
+			"40c2dfe6-be06-4bf0-ba45-912b47b86575" "4ada11c3-3a60-4087-af6a-a86667fb405f"
+			"59c6c737-c19f-4561-83bf-fb6677f94526" "6de222bc-ddaf-4cf1-9a43-9c920d38dce9"
+			"7df4dcb2-cf00-4608-89ed-0d26f69bee5f" "8b3ba311-ba6f-405a-9669-d56774b09bfd"
+			"9617faaf-6434-4a95-8d89-d22f5108b073" "969bf7c8-949e-4686-a2e2-beec35f0fc5f"
+			"cf807277-56c8-4e20-8834-dad78cc649cc" "d352f9b2-7940-4ae5-a426-046b3ecf4db6"
+			"e4cbf31c-9497-4255-bc42-33dda2f98989" "f1094a68-0f73-42db-a44d-445e356ae712"
+			"fadc9a7b-edb4-4ec2-9615-eb0089a984be" "fe75700f-cfbc-4fba-9d4b-11ffd5ce39b7"
 		)
 	)
 	(group ""
