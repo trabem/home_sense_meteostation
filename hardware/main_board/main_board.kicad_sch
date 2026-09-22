@@ -4024,12 +4024,6 @@
 		(uuid "0422116d-5074-45fc-80d8-820c768ad917")
 	)
 	(junction
-		(at 147.32 76.2)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "04b41f2b-4fdf-4b04-9772-e27b17a201c1")
-	)
-	(junction
 		(at 207.01 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4112,6 +4106,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ee8abd08-bf0e-4704-b5e1-5ea01679d077")
+	)
+	(junction
+		(at 147.32 74.93)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f235851f-782c-42cb-8d86-b28f62c4ddc2")
 	)
 	(no_connect
 		(at 160.02 88.9)
@@ -4733,16 +4733,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 76.2) (xy 147.32 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8039003e-b420-4b67-98d7-3872b037a470")
-	)
-	(wire
-		(pts
 			(xy 245.11 96.52) (xy 245.11 97.79)
 		)
 		(stroke
@@ -4940,6 +4930,16 @@
 			(type default)
 		)
 		(uuid "a5de15f7-218e-43f5-9d2d-483c3f306591")
+	)
+	(wire
+		(pts
+			(xy 144.78 74.93) (xy 147.32 74.93)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a996aacc-e37b-41e4-9b30-398e0716138b")
 	)
 	(wire
 		(pts
@@ -5430,6 +5430,16 @@
 			(justify left bottom)
 		)
 		(uuid "59c6c737-c19f-4561-83bf-fb6677f94526")
+	)
+	(label "WIFI_SW"
+		(at 165.1 90.17 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5a7261b3-57f7-4599-8884-1aee5cbf1644")
 	)
 	(label "SPI_SCK"
 		(at 41.91 49.53 180)
@@ -6269,8 +6279,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 142.24 71.12 0)
-		(mirror x)
+		(at 139.7 74.93 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6281,7 +6290,7 @@
 		(fields_autoplaced yes)
 		(uuid "12c20b37-307a-4504-b8b9-b8aae5587642")
 		(property "Reference" "#PWR011"
-			(at 142.24 64.77 0)
+			(at 133.35 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6292,7 +6301,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 142.2399 67.31 90)
+			(at 135.89 74.9299 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -6303,7 +6312,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 142.24 71.12 0)
+			(at 139.7 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6314,7 +6323,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 71.12 0)
+			(at 139.7 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6325,7 +6334,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 142.24 71.12 0)
+			(at 139.7 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12544,8 +12553,7 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 142.24 73.66 0)
-		(mirror x)
+		(at 142.24 74.93 270)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -12555,7 +12563,7 @@
 		(dnp no)
 		(uuid "ccaed9fa-644c-4206-9e8b-0b4925d0d424")
 		(property "Reference" "C24"
-			(at 139.7 72.3835 0)
+			(at 140.9635 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12566,7 +12574,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 139.7 74.9235 0)
+			(at 143.5035 72.39 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -12577,7 +12585,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 142.24 73.66 0)
+			(at 142.24 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12588,7 +12596,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 73.66 0)
+			(at 142.24 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12599,7 +12607,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor, small symbol"
-			(at 142.24 73.66 0)
+			(at 142.24 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12610,7 +12618,7 @@
 			)
 		)
 		(property "Comment" "X7R, ±10%, 16 V"
-			(at 142.24 73.66 0)
+			(at 142.24 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12621,7 +12629,7 @@
 			)
 		)
 		(property "Purchase-URL" ""
-			(at 142.24 73.66 0)
+			(at 142.24 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14256,21 +14264,22 @@
 	)
 	(group ""
 		(uuid "bbe24551-96ca-414f-8059-1cbfef21e39e")
-		(members "04b41f2b-4fdf-4b04-9772-e27b17a201c1" "05421f42-5dd9-4d96-93ed-cbc3ff509bbe"
-			"10fa5e20-8ce9-4415-93ec-ca36ab6594e0" "12c20b37-307a-4504-b8b9-b8aae5587642"
-			"1bbb138e-c26d-45bd-8d93-31cf33a5c487" "1bc73837-6252-494d-a2e8-1d859aac4148"
-			"2216ef4b-3dc8-456c-a6b7-4fe06d6c6ed2" "246cb546-9ae0-4f76-b409-634e721bdd77"
-			"2ed374a7-0cfe-4f23-bfd9-cb6e15417209" "32c95c1e-2a9b-4b59-8b60-027b1b798f7b"
-			"3c2123d1-1d0f-44c7-9d68-7a6ab7910ca9" "533f5b64-1daa-46fd-b8bf-a6362d248682"
-			"56eeb930-b85c-4018-9638-77667989505a" "58386cf7-75cd-4eb5-8bca-67f7eaa6ea0b"
-			"5a56a948-9abe-42ca-b5ff-d68b088d58ee" "5c5d73ff-5cd7-4597-89c6-99203cc5e380"
+		(members "05421f42-5dd9-4d96-93ed-cbc3ff509bbe" "10fa5e20-8ce9-4415-93ec-ca36ab6594e0"
+			"12c20b37-307a-4504-b8b9-b8aae5587642" "1bbb138e-c26d-45bd-8d93-31cf33a5c487"
+			"1bc73837-6252-494d-a2e8-1d859aac4148" "2216ef4b-3dc8-456c-a6b7-4fe06d6c6ed2"
+			"246cb546-9ae0-4f76-b409-634e721bdd77" "2ed374a7-0cfe-4f23-bfd9-cb6e15417209"
+			"32c95c1e-2a9b-4b59-8b60-027b1b798f7b" "3c2123d1-1d0f-44c7-9d68-7a6ab7910ca9"
+			"533f5b64-1daa-46fd-b8bf-a6362d248682" "56eeb930-b85c-4018-9638-77667989505a"
+			"58386cf7-75cd-4eb5-8bca-67f7eaa6ea0b" "5a56a948-9abe-42ca-b5ff-d68b088d58ee"
+			"5a7261b3-57f7-4599-8884-1aee5cbf1644" "5c5d73ff-5cd7-4597-89c6-99203cc5e380"
 			"74658e6b-d09d-45f4-832e-408ac840275e" "7bd4c9d4-77e1-4a34-ae5c-cb1083c24f21"
-			"8039003e-b420-4b67-98d7-3872b037a470" "9973080a-db4a-412d-80f0-60d101f47b29"
-			"9e5e00ff-3ae2-46b3-b404-f5f6fcd1b363" "b0594d44-94ac-4927-b4b0-e10c133a4855"
+			"9973080a-db4a-412d-80f0-60d101f47b29" "9e5e00ff-3ae2-46b3-b404-f5f6fcd1b363"
+			"a996aacc-e37b-41e4-9b30-398e0716138b" "b0594d44-94ac-4927-b4b0-e10c133a4855"
 			"c88ba79e-86ec-46c8-9457-b52711e64cca" "ccaed9fa-644c-4206-9e8b-0b4925d0d424"
 			"dbea8189-37d3-48f3-b7e2-b4f4d1b7bfbe" "e5019fdc-2d8e-46df-b0d4-dc5c90c97c85"
 			"e61e1433-2268-417b-b874-cef9a143dc56" "e6b9a991-9e7e-45a2-afdb-7aabc9748370"
-			"ed9a74e1-303e-467a-81a4-c3bf72c69857" "fd23a0db-cb29-4471-b2ee-3ea0e1d64304"
+			"ed9a74e1-303e-467a-81a4-c3bf72c69857" "f235851f-782c-42cb-8d86-b28f62c4ddc2"
+			"fd23a0db-cb29-4471-b2ee-3ea0e1d64304"
 		)
 	)
 	(group ""
