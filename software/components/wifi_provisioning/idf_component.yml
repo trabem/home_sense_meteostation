@@ -1,0 +1,4 @@
+version: "1.0.0"
+description: "BLE Wi-Fi provisioning (network_provisioning managed component, protocomm over BLE)"
+dependencies:
+  espressif/network_provisioning: "^1.2.5"

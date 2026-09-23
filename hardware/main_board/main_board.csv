@@ -25,7 +25,7 @@
 "24","J6","1","USB4105-GF-A-060","Connector_USB:USB_C_Receptacle_HRO_TYPE-C-31-M-12",""
 "25","L1","1","IHLP1212BZER1R0M11","IHLP1212BZER1R0M11:IND_IHLP1212BZER1R0M11",""
 "26","L2","1","4.7 uH","Inductor_SMD:L_Chilisin_BMRA00050520",""
-"27","R1","1","0R","Resistor_SMD:R_0603_1608Metric","0R configuration jumper"
+"27","R1,R6","2","0R","Resistor_SMD:R_0603_1608Metric","0R configuration jumper"
 "28","R2,R3,R10,R12,R23,R24","6","10k","Resistor_SMD:R_0603_1608Metric",""
 "29","R4,R5","2","22R","Resistor_SMD:R_0603_1608Metric",""
 "30","R7,R11","2","0R","Resistor_SMD:R_0603_1608Metric","RF matching element. Populate 0R initially. Value may be changed after VNA tuning."
@@ -56,3 +56,4 @@
 "55","U2","1","DS3231SN","Package_SO:SOIC-16W_7.5x10.3mm_P1.27mm",""
 "56","U4","1","TPS631000DRLR","TPS631000DRLR:TPS631000DRLR_TEX",""
 "57","U5","1","PCA9536DR","Package_SO:SOIC-8_3.9x4.9mm_P1.27mm",""
+"58","U6","1","USBLC6-2SC6","Package_TO_SOT_SMD:SOT-23-6",""

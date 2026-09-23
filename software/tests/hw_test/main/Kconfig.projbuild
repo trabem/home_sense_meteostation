@@ -1,0 +1,166 @@
+menu "Meteostation"
+
+    config METEO_MEASUREMENT_INTERVAL_SEC
+        int "Periodic measurement interval (seconds)"
+        default 300
+        help
+            Interval between periodic telemetry measurements. The device
+            deep-sleeps between measurements.
+
+    config METEO_I2C_FREQUENCY_HZ
+        int "I2C bus frequency (Hz)"
+        default 100000
+        help
+            100 kHz is the reliable default for the external sensor board
+            cable. The main board supports up to 400 kHz (4.7 kOhm pull-ups).
+
+    config METEO_I2C_TIMEOUT_MS
+        int "I2C transfer timeout (ms)"
+        default 100
+
+    menu "Wi-Fi"
+
+        config METEO_WIFI_CONNECT_TIMEOUT_MS
+            int "Wi-Fi connect timeout (ms)"
+            default 20000
+
+        config METEO_WIFI_MAX_RETRIES
+            int "Wi-Fi max connection retries"
+            default 3
+            help
+                Bounded retry count. On failure the device logs a diagnostic
+                error and goes back to deep sleep. No infinite retries.
+
+        config METEO_PROV_TIMEOUT_MS
+            int "BLE provisioning timeout (ms)"
+            default 300000
+            help
+                How long BLE provisioning stays active waiting for credentials
+                before the device gives up and goes back to sleep.
+
+        config METEO_SNTP_SERVER
+            string "SNTP server used after Wi-Fi connect"
+            default "pool.ntp.org"
+
+    endmenu
+
+    menu "MQTT"
+
+        config METEO_MQTT_URI
+            string "MQTT broker URI"
+            default "mqtts://broker.example.com:8883"
+            help
+                mqtts:// (TLS) is mandatory for production builds.
+
+        config METEO_MQTT_USERNAME
+            string "MQTT username (empty = anonymous)"
+            default ""
+
+        config METEO_MQTT_PASSWORD
+            string "MQTT password/token (empty = none)"
+            default ""
+
+        config METEO_MQTT_QOS
+            int "MQTT QoS for telemetry/events"
+            range 0 2
+            default 1
+
+        config METEO_MQTT_CONNECT_TIMEOUT_MS
+            int "MQTT connect timeout (ms)"
+            default 15000
+
+        config METEO_MQTT_PUBLISH_TIMEOUT_MS
+            int "MQTT publish (QoS ack) timeout (ms)"
+            default 10000
+
+        config METEO_MQTT_TLS_SKIP_VERIFY
+            bool "DEVELOPMENT ONLY: skip MQTT TLS certificate validation"
+            default false
+            help
+                Never enable this in production builds.
+
+        config METEO_MQTT_ROOT_TOPIC
+            string "MQTT root topic"
+            default "meteostation"
+
+    endmenu
+
+    menu "LoRa"
+
+        config METEO_LORA_FREQUENCY_HZ
+            int "LoRa frequency (Hz)"
+            default 868100000
+            help
+                EU868 by default. E22-900M22S supports roughly 850-930 MHz.
+
+        config METEO_LORA_TX_POWER_DBM
+            int "LoRa TX power (dBm)"
+            range -9 22
+            default 14
+
+        config METEO_LORA_SPREADING_FACTOR
+            int "LoRa spreading factor (5-12)"
+            range 5 12
+            default 7
+
+        choice METEO_LORA_BANDWIDTH
+            prompt "LoRa bandwidth"
+            default METEO_LORA_BANDWIDTH_125
+            config METEO_LORA_BANDWIDTH_125
+                bool "125 kHz"
+            config METEO_LORA_BANDWIDTH_250
+                bool "250 kHz"
+            config METEO_LORA_BANDWIDTH_500
+                bool "500 kHz"
+        endchoice
+
+        choice METEO_LORA_CODING_RATE
+            prompt "LoRa coding rate"
+            default METEO_LORA_CODING_RATE_4_5
+            config METEO_LORA_CODING_RATE_4_5
+                bool "4/5"
+            config METEO_LORA_CODING_RATE_4_6
+                bool "4/6"
+            config METEO_LORA_CODING_RATE_4_7
+                bool "4/7"
+            config METEO_LORA_CODING_RATE_4_8
+                bool "4/8"
+        endchoice
+
+        config METEO_LORA_TX_TIMEOUT_MS
+            int "LoRa TX completion timeout (ms)"
+            default 5000
+
+        config METEO_LORA_BUSY_TIMEOUT_MS
+            int "SX1262 BUSY wait timeout (ms)"
+            default 500
+
+    endmenu
+
+    menu "Board"
+
+        config METEO_J4_WIFI_ACTIVE_LEVEL
+            int "J4 level that selects Wi-Fi transport (0 = closed/LOW, 1 = open/HIGH)"
+            range 0 1
+            default 0
+            help
+                Default mapping: J4 open (HIGH via 47k pull-up) -> LoRa,
+                J4 closed (LOW) -> Wi-Fi. If the switch/cable is missing the
+                device falls back to the low-power autonomous LoRa mode.
+
+    endmenu
+
+    choice METEO_LOG_LEVEL
+        prompt "Application log level"
+        default METEO_LOG_LEVEL_INFO
+        config METEO_LOG_LEVEL_ERROR
+            bool "Error"
+        config METEO_LOG_LEVEL_WARN
+            bool "Warning"
+        config METEO_LOG_LEVEL_INFO
+            bool "Info"
+        config METEO_LOG_LEVEL_DEBUG
+            bool "Debug"
+    endchoice
+
+endmenu

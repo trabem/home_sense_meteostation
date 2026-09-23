@@ -1,0 +1,32 @@
+# Target is fixed for this product; ESP-IDF version is fixed in README.md and CI.
+CONFIG_IDF_TARGET="esp32c3"
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+
+# Custom partition table
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_PARTITION_TABLE_FILENAME="partitions.csv"
+
+# BLE for Wi-Fi provisioning (NimBLE)
+CONFIG_BT_ENABLED=y
+CONFIG_BT_NIMBLE_ENABLED=y
+
+# protocomm security 1 (proof-of-possession) for network provisioning
+CONFIG_ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_1=y
+CONFIG_ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_2=y
+
+# Larger main task stack: sensor + serialization work happens on the application task
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+
+# FreeRTOS tick for finer timeouts
+CONFIG_FREERTOS_HZ=1000
+
+# Watchdog stays enabled in production (see TZ 62)
+CONFIG_ESP_TASK_WDT_EN=y
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=10
+
+# Brownout detector stays enabled
+CONFIG_ESP_BROWNOUT_DET=y
+
+# Default log level; runtime level is set from CONFIG_METEO_LOG_LEVEL
+CONFIG_LOG_DEFAULT_LEVEL_INFO=y

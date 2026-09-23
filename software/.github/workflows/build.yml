@@ -1,0 +1,32 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run host unit tests (codec + app_flow)
+        run: bash tests/host/run_tests.sh
+
+  idf-build:
+    runs-on: ubuntu-latest
+    container: espressif/idf:v6.0.1
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build firmware (esp32c3)
+        run: idf.py set-target esp32c3 build
+      - name: Build on-target unit tests
+        run: idf.py -C tests/target_unit set-target esp32c3 build
+      - name: Build hardware test app
+        run: idf.py -C tests/hw_test set-target esp32c3 build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: meteostation-bin
+          path: |
+            build/meteostation.bin
+            build/bootloader/bootloader.bin
+            build/partition_table/partition-table.bin

@@ -1,0 +1,5 @@
+CONFIG_IDF_TARGET="esp32c3"
+
+# protocomm security 1 (proof-of-possession) for network provisioning
+CONFIG_ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_1=y
+CONFIG_ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_2=y

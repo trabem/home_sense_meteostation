@@ -1,0 +1,4 @@
+version: "1.0.0"
+description: "MQTT transport (transport_t vtable) over the espressif/mqtt managed component"
+dependencies:
+  espressif/mqtt: "^1.1.0"
