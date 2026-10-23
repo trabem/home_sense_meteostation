@@ -616,13 +616,13 @@
 	(footprint "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm"
 		(layer "F.Cu")
 		(uuid "4f1e4f18-7829-420a-a798-8a7f5085b05a")
-		(at 166.136 36.6014)
+		(at 168.656 36.6014 180)
 		(descr "C, Disc series, Radial, pin pitch=2.50mm, diameter*width=5*2.5mm^2, Capacitor, http://cdn-reichelt.de/documents/datenblatt/B300/DS_KERKO_TC.pdf")
 		(tags "C Disc series Radial pin pitch 2.50mm diameter 5mm width 2.5mm Capacitor")
 		(property "Reference" "C1"
 			(at 1.25 -2.5 0)
 			(layer "F.SilkS")
-			(uuid "b27ead53-b580-4244-9924-675b81cae8a3")
+			(uuid "c548b148-b865-415f-9edc-c593f38bd20c")
 			(effects
 				(font
 					(size 1 1)
@@ -633,7 +633,7 @@
 		(property "Value" "100nf"
 			(at 1.25 2.5 0)
 			(layer "F.Fab")
-			(uuid "983544da-914a-409e-8cf9-a033f125c743")
+			(uuid "6ffe463e-974e-4b30-aee2-9355eca51924")
 			(effects
 				(font
 					(size 1 1)
@@ -645,7 +645,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "432fb02c-ca20-43b0-8f03-5bc4cf578472")
+			(uuid "43415248-a5db-4659-89eb-32206cdf2311")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -656,7 +656,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d7c43b8a-65d1-49e7-b16b-0b291c12d98a")
+			(uuid "3bf61c0c-976b-4186-9cf1-9a7aa2dd2321")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -676,24 +676,14 @@
 		(attr through_hole)
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
-			(start -1.37 -1.37)
-			(end 3.87 -1.37)
+			(start 3.87 1.37)
+			(end -1.37 1.37)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "e33adab5-25fe-4152-ad3e-d166c1d209a7")
-		)
-		(fp_line
-			(start -1.37 1.37)
-			(end -1.37 -1.37)
-			(stroke
-				(width 0.12)
-				(type solid)
-			)
-			(layer "F.SilkS")
-			(uuid "459e4ef8-3388-4e33-adea-3c953d741c33")
+			(uuid "19e1b7fd-b940-4435-a7cd-61bce2cdc5f9")
 		)
 		(fp_line
 			(start 3.87 -1.37)
@@ -706,14 +696,24 @@
 			(uuid "361e005c-8d72-4613-a043-4c65fc8c1256")
 		)
 		(fp_line
-			(start 3.87 1.37)
-			(end -1.37 1.37)
+			(start -1.37 1.37)
+			(end -1.37 -1.37)
 			(stroke
 				(width 0.12)
 				(type solid)
 			)
 			(layer "F.SilkS")
-			(uuid "19e1b7fd-b940-4435-a7cd-61bce2cdc5f9")
+			(uuid "459e4ef8-3388-4e33-adea-3c953d741c33")
+		)
+		(fp_line
+			(start -1.37 -1.37)
+			(end 3.87 -1.37)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e33adab5-25fe-4152-ad3e-d166c1d209a7")
 		)
 		(fp_rect
 			(start -1.5 -1.5)
@@ -749,7 +749,7 @@
 			)
 		)
 		(pad "1" thru_hole circle
-			(at 0 0)
+			(at 0 0 180)
 			(size 1.6 1.6)
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
@@ -759,7 +759,7 @@
 			(uuid "80aa2c67-1e58-48e8-9c19-837a8cf3f94f")
 		)
 		(pad "2" thru_hole circle
-			(at 2.5 0)
+			(at 2.5 0 180)
 			(size 1.6 1.6)
 			(drill 0.8)
 			(layers "*.Cu" "*.Mask")
@@ -1361,11 +1361,11 @@
 		)
 	)
 	(gr_rect
-		(start 159 31)
-		(end 229 61)
+		(start 158.675 32.258)
+		(end 228.675 82.258)
 		(stroke
 			(width 0.05)
-			(type default)
+			(type solid)
 		)
 		(fill no)
 		(layer "Edge.Cuts")
@@ -1476,6 +1476,14 @@
 		(uuid "eafba4a7-dbc4-414a-9c10-027a1f8a6ef1")
 	)
 	(segment
+		(start 183.9976 35.814)
+		(end 174.9298 35.814)
+		(width 0.25)
+		(layer "F.Cu")
+		(net "+3V3")
+		(uuid "02a572c4-0df7-4910-9555-63ec54b03d60")
+	)
+	(segment
 		(start 175.0256 39.923)
 		(end 176.2506 41.148)
 		(width 0.25)
@@ -1508,20 +1516,20 @@
 		(uuid "18a6d2fd-3fc3-4efc-a487-ae4e83c86427")
 	)
 	(segment
+		(start 166.156 41.0826)
+		(end 166.0906 41.148)
+		(width 0.25)
+		(layer "F.Cu")
+		(net "+3V3")
+		(uuid "1a55a56e-4f18-489f-bb5c-09cc4c1ec3d4")
+	)
+	(segment
 		(start 204.7682 47.72)
 		(end 196.3166 39.2684)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "+3V3")
 		(uuid "23085dc6-c128-4223-8708-30491c84d6ae")
-	)
-	(segment
-		(start 166.136 41.1026)
-		(end 166.0906 41.148)
-		(width 0.25)
-		(layer "F.Cu")
-		(net "+3V3")
-		(uuid "246c6ffb-9ea6-4540-93de-9d7212432477")
 	)
 	(segment
 		(start 216.187 43.962)
@@ -1564,14 +1572,6 @@
 		(uuid "4ca0db86-5fa0-4331-b151-f0557b14d34c")
 	)
 	(segment
-		(start 183.9976 35.814)
-		(end 174.9298 35.814)
-		(width 0.25)
-		(layer "F.Cu")
-		(net "+3V3")
-		(uuid "5528dc3e-8377-4f74-9551-cc212f5bd64b")
-	)
-	(segment
 		(start 190.2656 39.923)
 		(end 191.4906 41.148)
 		(width 0.25)
@@ -1588,12 +1588,36 @@
 		(uuid "697dd699-9af8-4036-b8de-6ab7c3c4f26d")
 	)
 	(segment
+		(start 167.8324 34.925)
+		(end 166.156 36.6014)
+		(width 0.25)
+		(layer "F.Cu")
+		(net "+3V3")
+		(uuid "6b3b5e95-970a-408e-b789-0f47d2389b53")
+	)
+	(segment
+		(start 174.9298 35.814)
+		(end 174.0408 34.925)
+		(width 0.25)
+		(layer "F.Cu")
+		(net "+3V3")
+		(uuid "6dccde3f-20ff-4ae1-9890-bcf61a96acdf")
+	)
+	(segment
 		(start 213.5124 43.962)
 		(end 216.187 43.962)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "+3V3")
 		(uuid "760c0e0f-1e48-4a3e-a36c-a316e42dbf65")
+	)
+	(segment
+		(start 174.0408 34.925)
+		(end 167.8324 34.925)
+		(width 0.25)
+		(layer "F.Cu")
+		(net "+3V3")
+		(uuid "79724061-4eb2-4c23-becd-f1c2e69fc0dc")
 	)
 	(segment
 		(start 196.3166 39.2684)
@@ -1652,44 +1676,12 @@
 		(uuid "b1ad9321-f4fe-4692-824a-5b2bd97df8a2")
 	)
 	(segment
-		(start 174.9298 35.814)
-		(end 171.8564 32.7406)
+		(start 166.156 36.6014)
+		(end 166.156 41.0826)
 		(width 0.25)
 		(layer "F.Cu")
 		(net "+3V3")
-		(uuid "b2a1cff9-ee85-4a6b-bc65-f170eef48bc4")
-	)
-	(segment
-		(start 171.8564 32.7406)
-		(end 168.7576 32.7406)
-		(width 0.25)
-		(layer "F.Cu")
-		(net "+3V3")
-		(uuid "c3a5c1a7-1dbc-4fe7-9004-342f410ec834")
-	)
-	(segment
-		(start 166.136 35.3622)
-		(end 166.136 36.6014)
-		(width 0.25)
-		(layer "F.Cu")
-		(net "+3V3")
-		(uuid "cc2bef25-83f4-40be-ab40-2e686e9f3cbe")
-	)
-	(segment
-		(start 168.7576 32.7406)
-		(end 166.136 35.3622)
-		(width 0.25)
-		(layer "F.Cu")
-		(net "+3V3")
-		(uuid "d46aa73c-ff2f-44c9-b8c0-ee85aa36b09a")
-	)
-	(segment
-		(start 166.136 36.6014)
-		(end 166.136 41.1026)
-		(width 0.25)
-		(layer "F.Cu")
-		(net "+3V3")
-		(uuid "d527467e-eddb-4c6f-bce0-f3985f360c07")
+		(uuid "db81abee-4e46-4123-b4a5-daa83c1a14a8")
 	)
 	(segment
 		(start 204.565 52.092792)

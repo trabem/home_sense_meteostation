@@ -10,7 +10,7 @@ extern "C" {
 #endif
 
 /**
- * Wi-Fi station lifecycle (TZ 16, 18).
+ * Wi-Fi station lifecycle.
  *
  * Wi-Fi is started only for a transmission window and stopped right after.
  * Connection attempts are bounded: timeout + limited retries, never an

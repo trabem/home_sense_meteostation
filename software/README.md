@@ -61,10 +61,6 @@ FRAM (FM24CL16B) — **NOT FOR V1**, firmware її не потребує.
 | P1 | STDBY_STATUS (TP5000, open-drain, LOW = complete) |
 | P2 | J4 transport switch |
 
-> Припущення (позначено згідно правила ТЗ): точне розведення P0/P1/P2 та
-> полярність TPS2121 ST (HIGH = USB) треба звірити зі схемою; полярність J4
-> змінюється через `CONFIG_METEO_J4_WIFI_ACTIVE_LEVEL`.
-
 ## Build / flash / monitor
 
 ```bash
@@ -125,6 +121,21 @@ lightning=0x02, boot=0x03). Формат задокументований у
   наступні boot-и provisioning не запускають.
 - Timeout: `CONFIG_METEO_PROV_TIMEOUT_MS` (default 5 хв), далі deep sleep.
 
+### Як передати Wi-Fi credentials (покроково)
+
+1. Транспорт має бути Wi-Fi: на платі — замкнути J4 (LOW). Для bring-up на
+   платі без PCA9536: `menuconfig → Meteostation → Board → Transport
+   selection source → Force Wi-Fi (development)`.
+2. Якщо credentials відсутні — BLE provisioning стартує автоматично.
+3. З телефона: застосунок **ESP BLE Provisioning** (Android/iOS) або
+   `esp_prov` з idf-extra-components → вибрати пристрій `METEO_XXXXXX` →
+   ввести PoP → вибрати/ввести SSID+password.
+4. PoP детерміновано виводиться з MAC (FNV-1a, 8 hex). Для bring-up увімкни
+   `CONFIG_METEO_PROV_LOG_POP` — PoP друкується в лог при старті
+   provisioning (dev-only, не для production).
+5. Після успіху credentials у NVS; наступні boot-и підключаються напряму.
+   Стерти: `wifi_provisioning_reset()` або повне стирання flash.
+
 ## Deep Sleep behavior
 
 Перед кожним deep sleep централізований `prepare_sleep()`: MQTT disconnect →
@@ -142,15 +153,35 @@ WAKE_IRQ GPIO wake (HIGH) → `esp_deep_sleep_start()`.
 - `esp_sleep_is_valid_wakeup_gpio(GPIO1)` перевіряється при init; невалідний
   pin = loud failure.
 
+### Continuous mode (USB-powered)
+
+Підключення USB до комп'ютера автоматично вимикає deep sleep
+(`CONFIG_METEO_USB_CONTINUOUS_MODE`, default on) — без жодної ручної
+конфігурації. Детекція комбінована:
+
+- основна плата: TPS2121 `CHARGE_SOURCE_STATUS_OUT` (GPIO6 HIGH = USB);
+- fallback (`CONFIG_METEO_USB_DETECT_USJ`, default on): енумерація хоста на
+  native USB-Serial-JTAG (GPIO18/19) — покриває Super Mini та будь-яку плату,
+  де status line не заведена.
+
+У continuous mode цикли вимірювання йдуть по таймеру
+(`CONFIG_METEO_MEASUREMENT_INTERVAL_SEC`), WAKE_IRQ працює через runtime GPIO
+ISR (ISR лише сигналізує task notification), USB-порт лишається живим для
+прошивки/монітору, а BLE provisioning доступний у Wi-Fi mode за відсутності
+credentials. Плаваючий GPIO6 читається як "не USB" (pull-down) → battery-safe
+поведінка за замовчуванням. Крайній випадок —
+`CONFIG_METEO_FORCE_CONTINUOUS` (dev-only).
+
 ### Power behaviour
 
-| State        | ESP32  | Wi-Fi        | BLE | LoRa   |
-| ------------ | ------ | ------------ | --- | ------ |
-| Deep sleep   | sleep  | off          | off | sleep  |
-| Measurement  | active | off          | off | sleep  |
-| Wi-Fi TX     | active | on           | off | sleep  |
-| LoRa TX      | active | off          | off | active |
-| Provisioning | active | provisioning | on  | sleep  |
+| State              | ESP32  | Wi-Fi        | BLE | LoRa   |
+| ------------------ | ------ | ------------ | --- | ------ |
+| Deep sleep         | sleep  | off          | off | sleep  |
+| Measurement        | active | off          | off | sleep  |
+| Wi-Fi TX           | active | on           | off | sleep  |
+| LoRa TX            | active | off          | off | active |
+| Provisioning       | active | provisioning | on  | sleep  |
+| Continuous (USB)   | active | per cycle    | off | sleep  |
 
 ## Tests
 

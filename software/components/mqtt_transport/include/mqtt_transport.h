@@ -10,7 +10,7 @@ extern "C" {
 #endif
 
 /**
- * MQTT transport over ESP-MQTT (TZ 19, 58).
+ * MQTT transport over ESP-MQTT.
  *
  * open()  -> start client, wait for MQTT_EVENT_CONNECTED (bounded)
  * send()  -> publish JSON to meteostation/<device_id>/{telemetry|events|status}

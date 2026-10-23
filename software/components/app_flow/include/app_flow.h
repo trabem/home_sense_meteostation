@@ -9,7 +9,7 @@ extern "C" {
 #endif
 
 /**
- * Pure application decision logic (TZ 28-29, 14).
+ * Pure application decision logic.
  *
  * No hardware, no ESP-IDF dependencies: fully unit-testable on the host.
  */
@@ -38,7 +38,7 @@ typedef enum {
 app_action_t app_flow_decide(app_wakeup_reason_t wake, bool irq_is_lightning);
 
 /**
- * Board-level J4 -> transport mapping (TZ 14). Polarity is a compile-time
+ * Board-level J4 -> transport mapping. Polarity is a compile-time
  * board policy passed in explicitly, so this stays testable.
  */
 transport_mode_t app_flow_transport_from_j4(bool j4_level, bool wifi_active_high);

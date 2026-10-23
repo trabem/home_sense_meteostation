@@ -73,6 +73,14 @@ esp_err_t board_get_charge_state(charge_state_t *state);
  */
 esp_err_t board_get_power_source(power_source_t *source);
 
+/**
+ * Combined automatic USB-presence detection: TPS2121 status line (main PCB)
+ * or, as a fallback, an enumerated USB host on the USB-Serial-JTAG peripheral
+ * (GPIO18/19, e.g. ESP32-C3 Super Mini). No configuration needed on either
+ * board; used to select continuous (no deep sleep) operation.
+ */
+bool board_usb_power_present(void);
+
 /** "meteo-<last 3 MAC bytes, lowercase hex>", e.g. "meteo-a17c42" (TZ 46). */
 esp_err_t board_get_device_id(char *buf, size_t buf_size);
 

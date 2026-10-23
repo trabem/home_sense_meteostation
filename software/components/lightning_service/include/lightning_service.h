@@ -11,7 +11,7 @@ extern "C" {
 #endif
 
 /**
- * Lightning event processing (TZ 31, 49, 52).
+ * Lightning event processing.
  *
  * Minimal path after a WAKE_IRQ wake: read the AS3935 interrupt reason,
  * and only for a real lightning interrupt collect distance/energy.

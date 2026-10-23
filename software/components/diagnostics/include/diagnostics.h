@@ -7,7 +7,7 @@ extern "C" {
 #endif
 
 /**
- * Failure counters (TZ 45).
+ * Failure counters.
  *
  * Volatile per boot cycle by design: they answer "what went wrong during
  * this active window" and are reported with telemetry. boot_count itself is

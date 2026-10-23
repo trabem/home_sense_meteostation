@@ -1,5 +1,5 @@
 /**
- * Hardware integration test build (TZ 56).
+ * Hardware integration test build.
  *
  * Runs a sequential checklist against the real board and prints PASS/FAIL
  * per item on the monitor. Ends with a 10 s deep-sleep timer wake test;

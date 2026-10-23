@@ -11,7 +11,7 @@ extern "C" {
 #endif
 
 /**
- * BME280 environmental sensor, forced mode only (TZ 8).
+ * BME280 environmental sensor, forced mode only.
  *
  * CSB=3V3, SDO=GND -> I2C address 0x76. Each measurement cycle:
  * trigger forced measurement -> wait completion -> read T/P/RH -> sleep.

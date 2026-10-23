@@ -11,7 +11,7 @@ extern "C" {
 #endif
 
 /**
- * Generic INA226 power monitor driver (TZ 12).
+ * Generic INA226 power monitor driver.
  *
  * One driver, two instances: battery (0x44, Rshunt 0.020 ohm) and solar
  * (0x40, Rshunt 0.020 ohm). Between measurements devices are put into

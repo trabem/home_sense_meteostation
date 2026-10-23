@@ -21,7 +21,7 @@ CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
 # FreeRTOS tick for finer timeouts
 CONFIG_FREERTOS_HZ=1000
 
-# Watchdog stays enabled in production (see TZ 62)
+# Watchdog stays enabled in production
 CONFIG_ESP_TASK_WDT_EN=y
 CONFIG_ESP_TASK_WDT_TIMEOUT_S=10
 

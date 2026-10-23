@@ -23,7 +23,12 @@
   "clangd.arguments": [
     "--background-index",
     "--query-driver=**",
-    "--compile-commands-dir=c:\\Users\\Ruslan\\Downloads\\final\\software\\software\\build"
+    "--compile-commands-dir=c:\\Users\\Ruslan\\Downloads\\final\\software\\build"
   ],
-  "idf.currentSetup": "C:\\esp\\v6.0.1\\esp-idf"
+  "idf.currentSetup": "C:\\esp\\v6.0.1\\esp-idf",
+  "idf.flashType": "UART",
+  "idf.port": "COM5",
+  "idf.customExtraVars": {
+    "IDF_TARGET": "esp32c3"
+  }
 }

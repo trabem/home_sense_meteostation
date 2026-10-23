@@ -9,7 +9,7 @@ extern "C" {
 #endif
 
 /**
- * Single shared I2C master bus (TZ 7).
+ * Single shared I2C master bus.
  *
  * The bus is a shared resource for DS3231, INA226 x2, PCA9536, BME280 and
  * AS3935. The ESP-IDF i2c_master driver serializes access internally, so one

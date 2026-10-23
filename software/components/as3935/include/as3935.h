@@ -11,7 +11,7 @@ extern "C" {
 #endif
 
 /**
- * AS3935 lightning sensor (TZ 9).
+ * AS3935 lightning sensor.
  *
  * The driver only reports facts: interrupt reason, estimated distance,
  * energy. It never decides what to do with a lightning event.

@@ -11,12 +11,14 @@
 #include "bme280.h"
 #include "board.h"
 #include "diagnostics.h"
+#include "driver/gpio.h"
 #include "ds3231.h"
 #include "esp_check.h"
 #include "esp_log.h"
 #include "esp_netif_sntp.h"
 #include "esp_system.h"
 #include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 #include "i2c_bus.h"
 #include "ina226.h"
 #include "lightning_service.h"
@@ -52,6 +54,8 @@ typedef struct {
     as3935_handle_t as3935;
     sx1262_handle_t radio;
     bool radio_asleep;
+    bool continuous;            /* USB-powered: timer loop instead of deep sleep */
+    TaskHandle_t main_task;     /* runtime WAKE_IRQ notifications */
 } app_context_t;
 
 static app_context_t s_app;
@@ -97,7 +101,7 @@ static esp_err_t ensure_radio_created(void)
     return ESP_OK;
 }
 
-/* Wi-Fi mode must never leave the SX1262 burning current in standby (TZ 22). */
+/* Wi-Fi mode must never leave the SX1262 burning current in standby. */
 static void ensure_radio_asleep(void)
 {
     if (s_app.radio == NULL || s_app.radio_asleep) {
@@ -117,7 +121,7 @@ static void ensure_radio_asleep(void)
 static void maybe_sync_rtc(void)
 {
     if (rtc_now() >= RTC_MIN_VALID_EPOCH) {
-        return;  /* RTC looks sane; do not resync on every wake (TZ 11) */
+        return;  /* RTC looks sane; do not resync on every wake */
     }
 
     ESP_LOGI(TAG, "RTC time invalid, syncing via SNTP");
@@ -304,7 +308,7 @@ static void run_telemetry_flow(void)
         s_app.transport_mode = TRANSPORT_MODE_LORA;
     }
 
-    /* Measurement-level init (TZ 41): created only for a periodic cycle. */
+    /* Measurement-level init: created only for a periodic cycle. */
     bme280_handle_t bme = NULL;
     ina226_handle_t battery_ina = NULL;
     ina226_handle_t solar_ina = NULL;
@@ -415,7 +419,95 @@ static void run_telemetry_flow(void)
 }
 
 /* ------------------------------------------------------------------ */
-/* Boot / lifecycle                                                    */
+/* Lightning IRQ handling (shared by deep-sleep wake and runtime ISR)  */
+/* ------------------------------------------------------------------ */
+
+static bool handle_lightning_irq(void)
+{
+    if (s_app.as3935 == NULL) {
+        ESP_LOGW(TAG, "WAKE_IRQ but AS3935 unavailable");
+        return false;
+    }
+
+    bool is_lightning = false;
+    lightning_event_t lightning = {0};
+    lightning.timestamp = rtc_now();
+
+    lightning_service_handle_t lightning_service = NULL;
+    const lightning_service_config_t service_config = { .as3935 = s_app.as3935 };
+    if (lightning_service_init(&lightning_service, &service_config) == ESP_OK) {
+        if (lightning_service_process_irq(lightning_service, &lightning,
+                                          &is_lightning) != ESP_OK) {
+            ESP_LOGW(TAG, "AS3935 processing failed");
+            diagnostics_increment(DIAG_SENSOR_FAILURE);
+            is_lightning = false;
+        }
+        lightning_service_deinit(lightning_service);
+    }
+
+    if (is_lightning) {
+        run_lightning_flow(&lightning);
+    }
+    return is_lightning;
+}
+
+/* ------------------------------------------------------------------ */
+/* Continuous mode (USB-powered): timer cycles, no deep sleep          */
+/* ------------------------------------------------------------------ */
+
+static void IRAM_ATTR wake_irq_handler(void *arg)
+{
+    (void)arg;
+    BaseType_t higher_priority_woken = pdFALSE;
+    vTaskNotifyGiveFromISR(s_app.main_task, &higher_priority_woken);
+    portYIELD_FROM_ISR(higher_priority_woken);
+}
+
+static void arm_wake_irq_runtime(void)
+{
+    if (s_app.as3935 == NULL) {
+        return;
+    }
+    const esp_err_t err = gpio_install_isr_service(0);
+    if (err != ESP_OK && err != ESP_ERR_INVALID_STATE) {
+        ESP_LOGW(TAG, "isr service install failed: %s", esp_err_to_name(err));
+        return;
+    }
+    if (gpio_set_intr_type(BOARD_GPIO_WAKE_IRQ, GPIO_INTR_POSEDGE) != ESP_OK
+        || gpio_isr_handler_add(BOARD_GPIO_WAKE_IRQ, wake_irq_handler, NULL) != ESP_OK) {
+        ESP_LOGW(TAG, "WAKE_IRQ runtime handler setup failed");
+        return;
+    }
+    gpio_intr_enable(BOARD_GPIO_WAKE_IRQ);
+}
+
+static void continuous_loop(void)
+{
+    s_app.main_task = xTaskGetCurrentTaskHandle();
+    arm_wake_irq_runtime();
+
+    const TickType_t period =
+        pdMS_TO_TICKS((uint64_t)CONFIG_METEO_MEASUREMENT_INTERVAL_SEC * 1000ULL);
+    TickType_t next_telemetry = xTaskGetTickCount();
+
+    for (;;) {
+        const TickType_t now = xTaskGetTickCount();
+        if ((int32_t)(next_telemetry - now) <= 0) {
+            run_telemetry_flow();
+            next_telemetry = xTaskGetTickCount() + period;
+            continue;
+        }
+        /* Sleep on the notification until the next measurement is due; a
+         * runtime AS3935 IRQ wakes the loop immediately. */
+        if (ulTaskNotifyTake(pdTRUE, next_telemetry - now) > 0) {
+            ESP_LOGI(TAG, "runtime WAKE_IRQ");
+            handle_lightning_irq();
+        }
+    }
+}
+
+/* ------------------------------------------------------------------ */
+/* Boot / lifecycle                                                   */
 /* ------------------------------------------------------------------ */
 
 esp_err_t app_init(void)
@@ -458,46 +550,48 @@ esp_err_t app_init(void)
 
     power_manager_config_t power_config;
     app_config_fill_power(&power_config);
-    /* Fails loudly if WAKE_IRQ is not a valid deep-sleep wake source (TZ 10). */
+    /* Fails loudly if WAKE_IRQ is not a valid deep-sleep wake source. */
     ESP_RETURN_ON_ERROR(power_manager_create(&power_config, &s_app.power), TAG,
                         "power manager init failed");
 
     s_app.wake_reason = power_manager_get_wakeup_reason(s_app.power);
 
+    const bool usb_power = board_usb_power_present();
+#if CONFIG_METEO_FORCE_CONTINUOUS
+    s_app.continuous = true;
+    ESP_LOGW(TAG, "DEV: continuous mode forced, deep sleep disabled");
+#elif CONFIG_METEO_USB_CONTINUOUS_MODE
+    s_app.continuous = usb_power;
+#else
+    s_app.continuous = false;
+#endif
+
     ESP_LOGI(TAG, "meteostation fw=%s idf=%s device=%s boot=%lu", s_app.fw_version,
              esp_get_idf_version(), s_app.device_id, (unsigned long)s_app.boot_count);
-    ESP_LOGI(TAG, "reset_reason=%d wake_reason=%d", (int)esp_reset_reason(),
-             (int)s_app.wake_reason);
+    ESP_LOGI(TAG, "reset_reason=%d wake_reason=%d usb_power=%d run_mode=%s",
+             (int)esp_reset_reason(), (int)s_app.wake_reason, (int)usb_power,
+             s_app.continuous ? "continuous" : "deep-sleep");
     return ESP_OK;
 }
 
 void app_run(void)
 {
-    bool is_lightning = false;
-    lightning_event_t lightning = {0};
+    if (s_app.continuous) {
+        ESP_LOGI(TAG, "USB-powered: continuous mode, sleeping between cycles only");
+        continuous_loop();  /* never returns */
+    }
 
-    /* Lightning wake: read the AS3935 reason before anything else (TZ 31). */
-    if (s_app.wake_reason == APP_WAKE_LIGHTNING_IRQ && s_app.as3935 != NULL) {
-        lightning.timestamp = rtc_now();
-        lightning_service_handle_t lightning_service = NULL;
-        const lightning_service_config_t service_config = { .as3935 = s_app.as3935 };
-        if (lightning_service_init(&lightning_service, &service_config) == ESP_OK) {
-            if (lightning_service_process_irq(lightning_service, &lightning,
-                                              &is_lightning) != ESP_OK) {
-                ESP_LOGW(TAG, "AS3935 processing failed");
-                diagnostics_increment(DIAG_SENSOR_FAILURE);
-                is_lightning = false;
-            }
-            lightning_service_deinit(lightning_service);
-        }
+    bool is_lightning = false;
+
+    /* Lightning wake: read the AS3935 reason before anything else. */
+    if (s_app.wake_reason == APP_WAKE_LIGHTNING_IRQ) {
+        is_lightning = handle_lightning_irq();
     }
 
     const app_action_t action = app_flow_decide(s_app.wake_reason, is_lightning);
     switch (action) {
     case APP_ACTION_LIGHTNING:
-        ESP_LOGI(TAG, "flow: lightning event");
-        run_lightning_flow(&lightning);
-        break;
+        break;  /* already processed and transmitted above */
     case APP_ACTION_TELEMETRY:
         ESP_LOGI(TAG, "flow: periodic telemetry");
         run_telemetry_flow();
@@ -508,7 +602,7 @@ void app_run(void)
         break;
     }
 
-    /* Centralized sleep preparation (TZ 40). Radio is already asleep after
+    /* Centralized sleep preparation. Radio is already asleep after
      * LoRa close / Wi-Fi session; make the invariant explicit. */
     ensure_radio_asleep();
 

@@ -9,7 +9,7 @@ extern "C" {
 #endif
 
 /**
- * LoRa transport: TX-only, one shot per message (TZ 23).
+ * LoRa transport: TX-only, one shot per message.
  *
  * open()  -> wake SX1262 from sleep and (re)apply radio configuration
  * send()  -> bounded blocking TX (message type is already encoded in the

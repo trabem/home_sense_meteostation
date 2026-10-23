@@ -10,7 +10,7 @@ extern "C" {
 #endif
 
 /**
- * DS3231 RTC - canonical hardware clock (TZ 11).
+ * DS3231 RTC - canonical hardware clock.
  *
  * The CR2032 keeps time across main power loss. Application code works with
  * unix timestamps; this driver only converts to/from DS3231 BCD registers.

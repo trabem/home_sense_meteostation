@@ -9,7 +9,7 @@ extern "C" {
 #endif
 
 /**
- * NVS-backed persistent state (TZ 35).
+ * NVS-backed persistent state.
  *
  * Boot counter and small device state only; NVS is not a log database.
  * Wi-Fi credentials are managed by the provisioning manager itself.

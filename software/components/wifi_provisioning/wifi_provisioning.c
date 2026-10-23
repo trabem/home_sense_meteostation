@@ -139,6 +139,10 @@ esp_err_t wifi_provisioning_run(uint32_t timeout_ms)
              (unsigned long)pop_hash(mac, sizeof(mac)));
 
     ESP_LOGI(TAG, "starting BLE provisioning, service \"%s\"", service_name);
+#if CONFIG_METEO_PROV_LOG_POP
+    ESP_LOGW(TAG, "DEV BUILD: provisioning PoP = \"%s\" (do not ship this "
+                  "firmware)", pop);
+#endif
     err = network_prov_mgr_start_provisioning(NETWORK_PROV_SECURITY_1, pop,
                                               service_name, NULL);
     if (err != ESP_OK) {

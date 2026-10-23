@@ -7,8 +7,7 @@ extern "C" {
 #endif
 
 /**
- * Application-wide asynchronous events on the standard esp_event loop
- * (TZ 34).
+ * Application-wide asynchronous events on the standard esp_event loop.
  */
 
 ESP_EVENT_DECLARE_BASE(METEO_EVENT);

@@ -8,7 +8,7 @@ extern "C" {
 #endif
 
 /**
- * Domain/application data models (TZ 24-25, 38-39, 43).
+ * Domain/application data models.
  *
  * These types are pure data: no JSON, no transport, no hardware knowledge.
  * Drivers may fill measurement structs; serialization lives in
@@ -59,7 +59,7 @@ typedef struct {
     power_measurement_t battery;
     power_measurement_t solar;
 
-    bool environment_valid;            /* partial telemetry support (TZ 43) */
+    bool environment_valid;            /* partial telemetry support */
     bool battery_valid;
     bool solar_valid;
 
@@ -68,7 +68,7 @@ typedef struct {
 
     transport_mode_t transport;
 
-    /* status extras (TZ 24) */
+    /* status extras */
     uint32_t boot_count;
     uint8_t reset_reason;              /* esp_reset_reason_t */
     uint8_t wake_reason;               /* app_wakeup_reason_t */

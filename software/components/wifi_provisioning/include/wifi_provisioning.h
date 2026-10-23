@@ -10,7 +10,7 @@ extern "C" {
 
 /**
  * BLE Wi-Fi provisioning via the standard ESP-IDF provisioning manager
- * (network_provisioning component, protocomm over BLE) (TZ 17, 53-54).
+ * (network_provisioning component, protocomm over BLE).
  *
  * Started only when credentials are missing (or after an explicit reset),
  * never on every boot. Service name: METEO_<last 3 MAC bytes>, e.g.
