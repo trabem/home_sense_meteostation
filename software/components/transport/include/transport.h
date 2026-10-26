@@ -11,7 +11,7 @@ extern "C" {
 #endif
 
 /**
- * Transport abstraction (TZ 15).
+ * Transport abstraction.
  *
  * The application layer only sees this interface; it does not know whether
  * bytes leave via MQTT/TLS or an SX1262. Payloads are produced by

@@ -11,7 +11,7 @@ extern "C" {
 #endif
 
 /**
- * Creates the transport selected by the J4 mode (TZ 14-15).
+ * Creates the transport selected by the J4 mode.
  *
  *   TRANSPORT_MODE_WIFI -> mqtt_transport
  *   TRANSPORT_MODE_LORA -> lora_transport

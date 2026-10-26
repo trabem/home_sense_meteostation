@@ -11,7 +11,7 @@ extern "C" {
 #endif
 
 /**
- * PCA9536 4-bit I2C GPIO expander (TZ 13).
+ * PCA9536 4-bit I2C GPIO expander.
  *
  * Used on the main board for CHRG_STATUS, STDBY_STATUS and the J4 transport
  * mode switch. This driver only knows pins; semantics live in `board`.

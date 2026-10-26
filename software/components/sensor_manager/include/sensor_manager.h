@@ -10,7 +10,7 @@ extern "C" {
 #endif
 
 /**
- * Measurement subsystem (TZ 41, 43, 49).
+ * Measurement subsystem.
  *
  * Initialized only for a periodic measurement cycle, never for a lightning
  * wake. One failed sensor does not block telemetry: the corresponding

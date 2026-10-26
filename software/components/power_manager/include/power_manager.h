@@ -11,7 +11,7 @@ extern "C" {
 #endif
 
 /**
- * Deep-sleep orchestration (TZ 10, 30, 40).
+ * Deep-sleep orchestration.
  *
  * Maps ESP-IDF wakeup/reset causes to app_wakeup_reason_t and configures
  * both wake sources (timer + WAKE_IRQ GPIO) before every deep sleep.

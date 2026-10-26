@@ -12,7 +12,7 @@ extern "C" {
 #endif
 
 /**
- * Board component: the single place that knows the physical PCB (TZ 6).
+ * Board component: the single place that knows the physical PCB.
  *
  * Owns the PCA9536 (J4 transport selector, charger status lines) and the
  * direct GPIO inputs (WAKE_IRQ, CHARGE_SOURCE_STATUS_OUT). Everything else
@@ -44,7 +44,7 @@ extern "C" {
 #define BOARD_PCA9536_PIN_STDBY_STATUS  1
 #define BOARD_PCA9536_PIN_J4            2
 
-/* INA226 instances (TZ 12) */
+/* INA226 instances */
 #define BOARD_INA226_BATTERY_ADDRESS    0x44
 #define BOARD_INA226_SOLAR_ADDRESS      0x40
 #define BOARD_INA226_BATTERY_SHUNT_OHM  0.020f
@@ -59,16 +59,16 @@ extern "C" {
 esp_err_t board_init(i2c_master_bus_handle_t i2c_bus);
 
 /**
- * Transport selected by the J4 switch (TZ 14). Polarity comes from
+ * Transport selected by the J4 switch. Polarity comes from
  * CONFIG_METEO_J4_WIFI_ACTIVE_LEVEL (board-level policy).
  */
 esp_err_t board_get_transport_mode(transport_mode_t *mode);
 
-/** TP5000 charger state from CHRG_STATUS/STDBY_STATUS (TZ 38). */
+/** TP5000 charger state from CHRG_STATUS/STDBY_STATUS. */
 esp_err_t board_get_charge_state(charge_state_t *state);
 
 /**
- * Power source from CHARGE_SOURCE_STATUS_OUT (TZ 39). Only states the
+ * Power source from CHARGE_SOURCE_STATUS_OUT. Only states the
  * hardware can actually distinguish are reported.
  */
 esp_err_t board_get_power_source(power_source_t *source);
@@ -81,7 +81,7 @@ esp_err_t board_get_power_source(power_source_t *source);
  */
 bool board_usb_power_present(void);
 
-/** "meteo-<last 3 MAC bytes, lowercase hex>", e.g. "meteo-a17c42" (TZ 46). */
+/** "meteo-<last 3 MAC bytes, lowercase hex>", e.g. "meteo-a17c42". */
 esp_err_t board_get_device_id(char *buf, size_t buf_size);
 
 #ifdef __cplusplus

@@ -11,7 +11,7 @@ extern "C" {
 #endif
 
 /**
- * Wire serialization (TZ 26-27). Transports never build payloads; they only
+ * Wire serialization. Transports never build payloads; they only
  * receive opaque buffers produced here.
  *
  * MQTT payload: JSON text.

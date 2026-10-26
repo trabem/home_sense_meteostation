@@ -12,7 +12,7 @@ extern "C" {
 #endif
 
 /**
- * SX1262 driver for the Ebyte E22-900M22S module (TZ 20-23).
+ * SX1262 driver for the Ebyte E22-900M22S module.
  *
  * TX-only usage. RF switch control via DIO2 (SetDIO2AsRfSwitchCtrl), as the
  * PCB routes E22 DIO2 -> LORA_TXEN; there is no MCU GPIO for RXEN.

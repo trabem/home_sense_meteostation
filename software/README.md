@@ -13,7 +13,7 @@ peripherals low-power → deep sleep**.
 
 | Item          | Version             |
 | ------------- | ------------------- |
-| ESP-IDF       | **v6.0.1** (fixed; same in CI) |
+| ESP-IDF       | **v6.0.1** (fixed) |
 | Target        | `esp32c3`           |
 | Language      | C (C11+)            |
 
@@ -136,6 +136,27 @@ lightning=0x02, boot=0x03). Формат задокументований у
 5. Після успіху credentials у NVS; наступні boot-и підключаються напряму.
    Стерти: `wifi_provisioning_reset()` або повне стирання flash.
 
+### Як скинути provisioning (стерти Wi-Fi credentials)
+
+1. Тільки NVS-розділ (рекомендовано; credentials живуть у NVS):
+   `parttool.py --port COMx erase_partition --partition-name=nvs`
+   (`parttool.py` — з ESP-IDF: `$IDF_PATH/components/partition_table/`).
+2. Повне стирання flash: `idf.py -p COMx erase-flash`, потім знову `flash`.
+3. Програмно: `wifi_provisioning_reset()` — стирає саме Wi-Fi credentials,
+   не чіпаючи решту NVS. З готової прошивки цей виклик у runtime нічим не
+   тригериться.
+
+Після стирання наступне завантаження у Wi-Fi mode автоматично запустить
+BLE provisioning. Нюанси:
+
+- Варіанти 1–2 стирають усю NVS, тобто разом із credentials обнуляються
+  boot counter і diagnostics counters (`app_storage`, `diagnostics`).
+  Варіант 3 цього не робить.
+- Для переналаштування J4 має бути замкнений (Wi-Fi mode): у LoRa mode
+  provisioning не запускається взагалі.
+- Ефект стирання проявляється на наступному wake/boot: на battery це
+  означає почекати до наступного timer wake або перезавантажити плату.
+
 ## Deep Sleep behavior
 
 Перед кожним deep sleep централізований `prepare_sleep()`: MQTT disconnect →
@@ -183,33 +204,13 @@ credentials. Плаваючий GPIO6 читається як "не USB" (pull-d
 | Provisioning       | active | provisioning | on  | sleep  |
 | Continuous (USB)   | active | per cycle    | off | sleep  |
 
-## Tests
-
-```bash
-# Host unit tests (codec + application decision logic), gcc:
-bash tests/host/run_tests.sh
-
-# On-target unity tests (esp32c3):
-cd tests/target_unit && idf.py set-target esp32c3 build flash monitor
-
-# Hardware integration checklist (I2C scan, sensors, LoRa TX, deep sleep,
-# WAKE_IRQ wake):
-cd tests/hw_test && idf.py set-target esp32c3 build flash monitor
-```
-
-Покриття: transport selection (J4 → MQTT/LoRa), wake routing
-(timer/lightning/non-lightning), serialization (MQTT JSON + LoRa binary,
-telemetry/lightning/boot, partial validity), failure paths
-(buffer overflow, невалідні аргументи). Hardware checklist очікує I2C scan:
-0x40/0x41/0x44/0x68 (+ 0x03/0x76 із sensor board).
-
 ## Project structure
 
 ```text
 main/                  composition root (app_main, app flows, app_config)
 components/
   board/               pin map, J4 transport, charge state, power source
-  app_flow/            pure wake routing + J4 mapping (host-testable)
+  app_flow/            pure wake routing + J4 mapping
   app_events/          METEO_EVENT base on esp_event
   app_storage/         NVS boot counter
   power_manager/       wake reason mapping, sleep preparation
@@ -222,7 +223,4 @@ components/
   wifi_manager/ wifi_provisioning/           Wi-Fi lifecycle + BLE provisioning
   telemetry/           domain models + wire codecs (JSON / binary)
   diagnostics/         failure counters
-tests/host/            host unit tests (gcc)
-tests/target_unit/     on-target unity tests
-tests/hw_test/         hardware integration checklist
 ```

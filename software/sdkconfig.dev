@@ -10,14 +10,15 @@
 CONFIG_METEO_TRANSPORT_FORCE_WIFI=y
 
 # Без deep sleep: пристрій завжди живий, порт не зникає, цикл кожні 30 с
-CONFIG_METEO_FORCE_CONTINUOUS=y
+# CONFIG_METEO_FORCE_CONTINUOUS is not set
 CONFIG_METEO_MEASUREMENT_INTERVAL_SEC=30
 
 # Показувати PoP у лозі (потрібен для вводу в застосунок provisioning)
 CONFIG_METEO_PROV_LOG_POP=y
+CONFIG_METEO_USB_CONTINUOUS_MODE=y
 
 # MQTT: вкажи IP свого ПК, де запущений mosquitto (можна лишити як є —
 # publish просто впаде по timeout, решта ланцюжка все одно видна в лозі)
-CONFIG_METEO_MQTT_URI="mqtt://192.168.0.100:1883"
+CONFIG_METEO_MQTT_URI="mqtt://192.168.0.105:1883"
 CONFIG_METEO_MQTT_USERNAME=""
 CONFIG_METEO_MQTT_PASSWORD=""
